@@ -506,11 +506,11 @@
   background: #B488BB;
 }
 #container #list .teacher-archive > ul li.teacher.sim {
-  background: url(http://untok.tium.co.kr/img/teacher2.png) no-repeat right bottom/235px auto #FCE5CE;
+  background: url(../img/teacher2.png) no-repeat right bottom/235px auto #FCE5CE;
 }
 @media (max-width: 430px) {
   #container #list .teacher-archive > ul li.teacher.sim {
-    background: url(http://untok.tium.co.kr/img/teacher2.png) no-repeat right bottom/160px auto #FCE5CE;
+    background: url(../img/teacher2.png) no-repeat right bottom/160px auto #FCE5CE;
   }
 }
 #container #list .teacher-archive > ul li.teacher.sim .info .name em {
@@ -1647,7 +1647,7 @@
 }
 
 #charge_visual {
-  background: url("/img/charge_visual.png") no-repeat;
+  background: url("../img/charge_visual.png") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -1689,7 +1689,7 @@
   color: #76A6D0;
 }
 #prepayment .banner {
-  background: url("/img/time_icon.png") no-repeat #C8C5FE;
+  background: url("../img/time_icon.png") no-repeat #C8C5FE;
   height: 130px;
   width: 100%;
   padding: 35px 25px;
@@ -1712,7 +1712,7 @@
   margin: 15px 0 0;
 }
 #prepayment .auto_banner {
-  background: url("/img/auto_banner.png") no-repeat #00AFA8;
+  background: url("../img/auto_banner.png") no-repeat #00AFA8;
   height: auto;
   width: 100%;
   padding: 35px 25px;
@@ -1755,7 +1755,7 @@
   word-break: keep-all;
 }
 #prepayment .prepaid_box .list p i {
-  background: url("/img/check_icon.png") no-repeat 0px 2px;
+  background: url("../img/check_icon.png") no-repeat 0px 2px;
   background-size: 20px auto;
   width: 35px;
   height: 30px;
@@ -2061,21 +2061,21 @@
   width: 30px;
   height: 30px;
   position: relative;
-  background: url("/img/checkbox_icon.png") no-repeat center/30px 30px;
+  background: url("../img/checkbox_icon.png") no-repeat center/30px 30px;
 }
 @media (max-width: 768px) {
   #time_choice .deps01 ul li .flex input[type=checkbox] + label {
-    background: url("/img/checkbox_icon.png") no-repeat center/20px 20px;
+    background: url("../img/checkbox_icon.png") no-repeat center/20px 20px;
     width: 20px;
     height: 20px;
   }
 }
 #time_choice .deps01 ul li .flex input[type=checkbox]:checked + label {
-  background: url("/img/checkbox_icon_w.png") no-repeat center/30px 30px;
+  background: url("../img/checkbox_icon_w.png") no-repeat center/30px 30px;
 }
 @media (max-width: 430px) {
   #time_choice .deps01 ul li .flex input[type=checkbox]:checked + label {
-    background: url("/img/checkbox_icon_w.png") no-repeat center/20px 20px;
+    background: url("../img/checkbox_icon_w.png") no-repeat center/20px 20px;
   }
 }
 #time_choice .deps01 ul li .flex span {
@@ -2213,21 +2213,21 @@
   width: 30px;
   height: 30px;
   position: relative;
-  background: url("/img/checkbox_icon.png") no-repeat center/30px 30px;
+  background: url("../img/checkbox_icon.png") no-repeat center/30px 30px;
 }
 @media (max-width: 768px) {
   #time_choice .deps02 ol li input[type=checkbox] + label {
-    background: url("/img/checkbox_icon.png") no-repeat center/20px 20px;
+    background: url("../img/checkbox_icon.png") no-repeat center/20px 20px;
     width: 24px;
     height: 24px;
   }
 }
 #time_choice .deps02 ol li input[type=checkbox]:checked + label {
-  background: url("/img/checkbox_active.png") no-repeat center/30px 30px;
+  background: url("../img/checkbox_active.png") no-repeat center/30px 30px;
 }
 @media (max-width: 540px) {
   #time_choice .deps02 ol li input[type=checkbox]:checked + label {
-    background: url("/img/checkbox_active.png") no-repeat center/20px 20px;
+    background: url("../img/checkbox_active.png") no-repeat center/20px 20px;
   }
 }
 #time_choice .deps02 ol li span {
@@ -2277,10 +2277,10 @@
   height: 20px;
   min-width: 20px;
   position: relative;
-  background: url("/img/checkbox_icon.png") no-repeat center/20px 20px;
+  background: url("../img/checkbox_icon.png") no-repeat center/20px 20px;
 }
 #time_choice .deps03 .agree_box input[type=checkbox]:checked + label {
-  background: url("/img/checkbox_active.png") no-repeat center/20px 20px;
+  background: url("../img/checkbox_active.png") no-repeat center/20px 20px;
 }
 #time_choice .deps03 .agree_box span {
   font-size: 1rem;
@@ -2635,7 +2635,7 @@
   font-size: 16px;
   border: none;
   outline: none;
-  background: url("/img/totop.png") no-repeat;
+  background: url("../img/totop.png") no-repeat;
   background-size: 30px auto;
   width: 30px;
   height: 30px;
@@ -2772,7 +2772,7 @@
   font-size: 14px;
 }
 .modal-content .select_choice select {
-  background: url("/img/select_arrow.png") no-repeat right 7px center/12px;
+  background: url("../img/select_arrow.png") no-repeat right 7px center/12px;
   width: 100%;
   height: 35px;
   text-align: center;
@@ -2919,7 +2919,7 @@
 }
 
 #calculate .flex select {
-  background: url("/img/select_arrow.png") no-repeat right 7px center/12px #fff !important;
+  background: url("../img/select_arrow.png") no-repeat right 7px center/12px #fff !important;
 }
 #calculate .flex .block .price_input {
   text-align: center;
@@ -2969,7 +2969,7 @@
   display: block;
   margin: 10px 0 0;
   width: 100%;
-  background: url("/img/select_arrow_g.png") no-repeat right 7px center/12px #fff;
+  background: url("../img/select_arrow_g.png") no-repeat right 7px center/12px #fff;
   width: 100%;
   height: 40px;
   font-size: 1rem;
@@ -3477,7 +3477,7 @@
   color: #555;
   height: 40px;
   border: 1px solid #ddd;
-  background: url("/img/select_arrow_g.png") no-repeat 95% 16px/12px #fff;
+  background: url("../img/select_arrow_g.png") no-repeat 95% 16px/12px #fff;
   outline: 0;
   border-radius: 10px;
   padding: 10px 20px 10px 10px;
@@ -3485,7 +3485,7 @@
 }
 @media (max-width: 430px) {
   #reservation .flex select {
-    background: url("/img/select_arrow_g.png") no-repeat 95% 13px/12px #fff;
+    background: url("../img/select_arrow_g.png") no-repeat 95% 13px/12px #fff;
     height: 35px;
   }
 }
