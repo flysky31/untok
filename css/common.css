@@ -1,0 +1,235 @@
+.no-scroll {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "a100";
+  src: url("/font/appleSD100.woff") format("woff");
+}
+@font-face {
+  font-family: "a200";
+  src: url("/font/appleSD200.woff") format("woff");
+}
+@font-face {
+  font-family: "appleSD400";
+  src: url("/font/appleSD400.woff") format("woff");
+}
+@font-face {
+  font-family: "a500";
+  src: url("/font/appleSD500.woff") format("woff");
+}
+@font-face {
+  font-family: "a600";
+  src: url("/font/appleSD600.woff") format("woff");
+}
+@font-face {
+  font-family: "a700";
+  src: url("/font/appleSD700.woff") format("woff");
+}
+@font-face {
+  font-family: "a800";
+  src: url("/font/appleSD800.woff") format("woff");
+}
+body {
+  font-family: "appleSD400", "Noto Sans KR";
+}
+
+#wrap {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+#header {
+  padding: 8px 0;
+  height: 55px;
+}
+#header .headWrap {
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+#header .headWrap h1 {
+  max-width: 40px;
+}
+#header .headWrap > div {
+  display: flex;
+  align-items: center;
+}
+#header .headWrap > div > ul {
+  display: flex;
+  align-items: center;
+}
+#header .headWrap > div > ul > li a {
+  display: flex;
+  margin-left: 15px;
+  color: #2E457C;
+  font-weight: 600;
+  line-height: 2.5;
+  font-size: 1rem;
+}
+@media (max-width: 360px) {
+  #header .headWrap > div > ul > li a {
+    margin-left: 10px;
+  }
+}
+#header .headWrap > div > ul > li a i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3px;
+}
+#header .headWrap > div > ul > li a i img {
+  height: 16px;
+}
+#header .headWrap > div > ul > li a span {
+  font-weight: 600;
+}
+#header .headWrap > div > ul > li span {
+  font-weight: 400;
+  align-self: flex-end;
+  margin-left: 3px;
+}
+#header .headWrap > div a.search {
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 360px) {
+  #header .headWrap > div a.search {
+    margin-left: 10px;
+  }
+}
+#header .headWrap > div a.member_edite {
+  font-size: 11px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 3px 12px;
+  margin: 0 0 0 10px;
+}
+#header .headWrap > div a.member_edite .arrow {
+  width: 8px;
+  height: 8px;
+}
+
+.quick-menu {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  max-width: 768px;
+  transform: translateX(-50%);
+  background: #F9F9F9;
+  min-width: 320px;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .quick-menu {
+    height: 67px;
+  }
+}
+.quick-menu ul {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+.quick-menu ul li {
+  width: 16.6666666667%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quick-menu ul li.on a img.on {
+  display: block;
+}
+.quick-menu ul li.on a img.off {
+  display: none;
+}
+.quick-menu ul li.on a p {
+  color: #2E457C;
+}
+.quick-menu ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.quick-menu ul li a img {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 35px;
+}
+@media (max-width: 768px) {
+  .quick-menu ul li a img {
+    /*width: auto;*/
+    max-width: auto;
+    height: 18px;
+  }
+}
+.quick-menu ul li a img.on {
+  display: none;
+}
+.quick-menu ul li a img.off {
+  display: block;
+}
+.quick-menu ul li a p {
+  margin-top: 5px;
+  color: #969696;
+  font-size: 0.875rem;
+}
+.quick_bar {
+  position: fixed;
+  left: 50%;
+  bottom: 100px;
+  width: 100%;
+  height: 60px;
+  max-width: 768px;
+  transform: translateX(-50%);
+  padding: 9px 25px;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .quick_bar {
+    bottom: 67px;
+    height: 55px;
+  }
+}
+.quick_bar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .quick_bar a {
+    height: 35px;
+    line-height: 35px;
+  }
+}
+.quick_bar a img {
+  width: 17px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 14px;
+}
+.quick_bar a:first-child {
+  margin: 0 5px 0 0;
+}/*# sourceMappingURL=common.css.map */
