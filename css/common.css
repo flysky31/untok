@@ -176,10 +176,10 @@ body {
   }
 }
 .quick-menu ul li a img.on {
-  display: none;
+  display: block;
 }
 .quick-menu ul li a img.off {
-  display: block;
+  display: none;
 }
 .quick-menu ul li a p {
   margin-top: 5px;
