@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운톡닷컴 회원가입</title>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="headWrap">
+                <a href="../index.html" class="flex" ><img src="/img/arrow_back.png" alt="뒤로가기"> 회원 가입</a>
+            </div>    
+        </header>    
+        <main id="container">    
+          <section id="kakao_wrap" class="">
+            <div class="inner">
+                <a href="#!">
+                    <strong class="font_medium">운톡닷컴의 KAKAO 친구가 되어주세요</strong>
+                    <span class="font_small">친구추가 후 채널 톡 문의 시 2,000 페이 추가 지급!</span>
+                    <i></i>
+                </a>
+            </div>
+        </section>
+        <div class="login_social">    
+            <style>
+              .login_social{margin-top:10px!important;}
+              .snslogin {text-align:center;margin-bottom: 60px}
+              .sns-icon {display:inline-block;vertical-align:middle;text-decoration:none}
+              .sns-icon:hover {text-decoration:none}
+              .sns-icon .ico {display:block;vertical-align:middle}
+              .sns-icon .txt i {font-style:normal}
+          </style>
+          <ul class="snslogin">
+              <li class="sns-icon"><a href="#!"><img src="../img/n_login2.svg" alt="네이버로그인"><span>네이버로그인</span></a></li>
+              <li class="sns-icon"><a href="#!"><img src="../img/k_login2.png" alt="카카오로그인"><span>카카오로그인</span></a></li>
+          </ul>
+        </div>
+        <section id="join_list" class="margin_b">
+            <div class="inner">
+    
+                <script src="http://untok.tium.co.kr/js/jquery.register_form.js"></script>
+        <script src="http://untok.tium.co.kr/js/certify.js?v=191202"></script>
+    <form name="fregisterform" id="fregisterform" action="http://untok.tium.co.kr/bbs/register_form_update.php" onsubmit="return fregisterform_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+        <input type="hidden" name="w" value="">
+        <input type="hidden" name="url" value="%2Fbbs%2Fregister_form.php">
+        <input type="hidden" name="cert_type" value="">
+        <input type="hidden" name="mb_email" value="">
+        <input type="hidden" name="cert_no" value="">
+        <input type="hidden" name="nickCheck" value="">
+        <input type="hidden" name="mb_sex" value="">        
+        <div class="join_box">
+            <h3>01 <i></i> <span>회원가입 정보 입력</span></h3>
+            <ul class="">
+                <li class="">
+                    <label for=""><span class="font_medium">아이디(이메일)</span></label>
+                    <input type="text"  name="mb_id" value="" id="reg_mb_id" required  class="  " minlength="3" maxlength="40" placeholder="아이디를 입력해주세요.">
+                </li>
+                <li class="">
+                    <input type="hidden" name="mb_nick_default" value="">
+                    <label for=""><span class="reg_mb_nick">닉네임</span></label>
+                    <span class="inp_box">
+                        <input type="text" name="mb_nick" value="" id="reg_mb_nick" required placeholder="닉네임을 입력해주세요.">
+                        <a href="#!" class="btn font_style" id="check_btn">중복확인</a>
+                    </span>
+                </li>
+                <li class="">
+                    <input type="hidden" id="reg_mb_name" name="mb_name" value=""  placeholder="이름">
+                    <label for="reg_mb_hp"><span class="font_medium">휴대폰번호</span></label>
+                    <span class="inp_box">
+                        <input type="text" name="mb_hp" value="" id="reg_mb_hp" placeholder="휴대폰번호를 입력해주세요." readonly >
+                        <a href="#!" id="win_hp_cert" class="btn font_style">인증하기</a>
+                         <input type="hidden" name="old_mb_hp" value="">
+                     </span>
+                    <p class="font_tall">- 코인 상담은 본인확인을 통해 인증된 휴대폰 번호로만 가능합니다.</p>
+                </li>
+                <li class="">
+                    <label for="reg_mb_password"><span class="font_medium">비밀번호</span></label>
+                    <input type="text" placeholder="비밀번호를 입력해주세요." name="mb_password" id="reg_mb_password" required minlength="3" maxlength="20">
+                </li>
+                <li class="">
+                    <label for="reg_mb_password_re"><span class="font_medium">비밀번호 확인</span></label>
+                    <input type="text" placeholder="비밀번호 확인" name="mb_password_re" id="reg_mb_password_re" required minlength="3" maxlength="20">
+                </li>
+                <li>
+                    <label for="reg_mb_recommend" class=""><span class="font_medium">추천인아이디</span></label>
+                    <input type="text" name="mb_recommend" id="reg_mb_recommend" class="frm_input" placeholder="추천인아이디">
+                </li>
+            </ul>
+        </div>
+        <div class="reception_box">
+            <h3>02 <i></i> <span>알림수신 설정</span></h3>
+            <ul>
+                <li>
+                    <div class="agreement flex">
+                        <div class="dp flex">
+                            <div class="pass">
+                                <h4>SMS수신</h4>
+                                <p>SMS로 안내 및 알람을 받으실 수 있습니다.</p>
+                            </div>
+                            <div class="flex ag1">
+                                <span id="myAgree1">미동의</span>
+                                <a href="#!" class="onoff"><span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dp flex">
+                        <div class="pass">
+                            <h4>이메일 수신</h4>
+                            <p>이메일로 안내 및 알람을 받으실 수 있습니다.</p>
+                        </div>
+                        <div class="flex ag2">
+                            <span id="myAgree2">미동의</span>
+                            <a href="#!" class="onoff"><span></span></a>
+                        </div>
+                    </div>
+                </li>
+                <li style="display: none">
+                    <div class="dp flex">
+                        <div class="pass">
+                            <h4>카카오 플러스 친구</h4>
+                            <p>이메일로 안내 및 알람을 받으실 수 있습니다.</p>
+                        </div>
+                        <div class="flex ag3">
+                            <span id="myAgree3">미동의</span>
+                            <a href="#!" class="onoff"><span></span></a>
+                        </div>
+                    </div>
+    
+                    <div class="get-agreement" style="display: none">
+                        <label>
+                            <input type="checkbox" name="mb_mailling" value="1" id="reg_mb_mailling" >
+                            <p>이메일 수신에 동의합니다.</p>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="mb_sms" value="1" id="reg_mb_sms" >
+                            <p>SNS 수신에 동의합니다.</p>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>    
+        <button type="submit" class="all_btn font_medium">가입하기</button>
+    </form>   
+    <script>
+        // JavaScript (ES6)
+        async  function check_nick() {
+            const nickInput = document.getElementById('reg_mb_nick');
+            const checkBtn = document.getElementById('check_btn');
+    
+            // 닉네임이 비어있으면 안내 메시지를 출력하고 함수 종료
+            if (!nickInput.value) {
+                // 필요한 에러 메시지 표시 코드
+                alert("닉네임을 입력해 주세요.");
+                return;
+            }
+    
+            // 중복확인 버튼 비활성화
+            checkBtn.innerText = '확인중...';
+            checkBtn.disabled = true;
+    
+            try {
+                // 서버에 닉네임 중복 확인 요청 보내기
+                const response = await  fetch(`/ajax/check-nickname.php?nick=${nickInput.value}`);
+                const data =  await response.json();
+                // input 요소 찾기
+                const nickCheckInput = document.querySelector('input[name="nickCheck"]')
+                // 중복확인 버튼 활성화 및 결과 출력
+                checkBtn.innerText = '중복확인';
+                checkBtn.disabled = false;
+    
+                if (data.isDuplicated) {
+                    alert(data.msg);
+                    // 중복된 닉네임 처리
+                    nickCheckInput.value =  '';
+                    // 필요한 코드 작성
+                } else {
+                    // 사용 가능한 닉네임 처리
+                    alert("사용가능한 닉네임입니다.");
+                    nickCheckInput.value =  'Y';
+                    // 필요한 코드 작성
+                }
+            } catch (error) {
+                // 오류 처리
+                console.error('Error:', error);
+                checkBtn.innerText = '중복확인';
+                checkBtn.disabled = false;
+            }
+        }    
+        document.getElementById('check_btn').addEventListener('click', check_nick);
+  
+    </script>
+    <script>
+        $(function() {
+            $("#reg_zip_find").css("display", "inline-block");
+    
+                    // 아이핀인증
+            $("#win_ipin_cert").click(function(e) {
+                if(!cert_confirm())
+                    return false;
+    
+                var url = "http://untok.tium.co.kr/plugin/okname/ipin1.php";
+                certify_win_open('kcb-ipin', url, e);
+                return;
+            });
+    
+                            // 휴대폰인증
+            $("#win_hp_cert").click(function(e) {
+                if(!cert_confirm())
+                    return false;
+    
+                
+                certify_win_open("kcb-hp", "http://untok.tium.co.kr/plugin/okname/hpcert1.php", e);
+                return;
+            });
+                });
+    
+        // 인증체크
+        function cert_confirm()
+        {
+            var val = document.fregisterform.cert_type.value;
+            var type;
+    
+            switch(val) {
+                case "ipin":
+                    type = "아이핀";
+                    break;
+                case "hp":
+                    type = "휴대폰";
+                    break;
+                default:
+                    return true;
+            }
+    
+            if(confirm("이미 "+type+"으로 본인확인을 완료하셨습니다.\n\n이전 인증을 취소하고 다시 인증하시겠습니까?"))
+                return true;
+            else
+                return false;
+        }
+    
+        // submit 최종 폼체크
+        function fregisterform_submit(f)
+        {
+    
+            // 회원아이디 검사
+            if (f.w.value == "") {
+                var msg = reg_mb_id_check();
+                if (msg) {
+                    alert(msg);
+                    f.mb_id.select();
+                    return false;
+                }
+            }
+            //아이디 값을 메일에 저장
+            if (f.w.value == "") {
+                f.mb_email.value = f.mb_id.value;
+            }
+    
+            if (f.w.value == '') {
+                if (f.mb_password.value.length < 3) {
+                    alert('비밀번호를 3글자 이상 입력하십시오.');
+                    f.mb_password.focus();
+                    return false;
+                }
+            }
+    
+            if (f.mb_password.value != f.mb_password_re.value) {
+                alert('비밀번호가 같지 않습니다.');
+                f.mb_password_re.focus();
+                return false;
+            }
+            if (f.mb_password.value.length > 0) {
+                if (f.mb_password_re.value.length < 3) {
+                    alert('비밀번호를 3글자 이상 입력하십시오.');
+                    f.mb_password_re.focus();
+                    return false;
+                }
+            }
+            // 이름 검사
+            /*if (f.w.value=='') {
+                if (f.mb_name.value.length < 1) {
+                    alert('이름을 입력하십시오.');
+                    f.mb_name.focus();
+                    return false;
+                }
+            }*/
+                    // 본인확인 체크
+            if(f.cert_no.value=="") {
+                alert("회원가입을 위해서는 본인확인을 해주셔야 합니다.");
+                return false;
+            }
+            
+            // 닉네임 검사
+            if ((f.w.value == "") || (f.w.value == "u" && f.mb_nick.defaultValue != f.mb_nick.value)) {
+                var msg = reg_mb_nick_check();
+                if (msg) {
+                    alert(msg);
+                    f.reg_mb_nick.select();
+                    return false;
+                }
+            }
+    
+            // E-mail 검사
+            /*if ((f.w.value == "") || (f.w.value == "u" && f.mb_email.defaultValue != f.mb_email.value)) {
+                var msg = reg_mb_email_check();
+                if (msg) {
+                    alert(msg);
+                    f.reg_mb_email.select();
+                    return false;
+                }
+            }*/
+    
+                    // 휴대폰번호 체크
+            var msg = reg_mb_hp_check();
+            if (msg) {
+                alert(msg);
+                f.reg_mb_hp.select();
+                return false;
+            }
+            
+           
+    
+            if (typeof(f.mb_recommend) != 'undefined' && f.mb_recommend.value) {
+                if (f.mb_id.value == f.mb_recommend.value) {
+                    alert('본인을 추천할 수 없습니다.');
+                    f.mb_recommend.focus();
+                    return false;
+                }
+               
+                var msg = reg_mb_recommend_check();
+    
+                if (msg) {
+                    alert(msg);
+                    f.mb_recommend.select();
+                    return false;
+                }
+            }
+    
+            
+            document.getElementById("btn_submit").disabled = "disabled";
+    
+            return true;
+        }
+        function number_format(num) {
+            return num;
+        }
+        function maxLengthCheck(object){
+            if (object.value.length > object.maxLength){
+                object.value = object.value.slice(0, object.maxLength);
+            }
+        }
+        </script>
+        <style>
+            @media (max-width:768px) {
+                .agree-tit2{
+                    display: flex;
+                    flex-direction:column;
+                    align-items:flex-start!important;
+                }
+            }
+        </style>       
+        </div>
+        </section>
+            <article class="quick-menu">
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <img src="../img/quick-home.svg" alt="" class="on">
+                            <img src="../img/quick-home_off.svg" alt="" class="off">
+                            <p>홈</p>
+                        </a>
+                    </li>
+                    <li class="on" >
+                        <a href="../sub/mypage/mypage.html">
+                            <img src="../img/quick-menu2.svg" alt="" class="on">
+                            <img src="../img/quick-menu_off2.svg" alt=""  class="off">
+                            <p>마이메뉴</p>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../sub/mypage/connexion.html">
+                            <img src="../img/quick-heart.svg" alt="" class="on">
+                            <img src="../img/quick-heart_off.svg" alt=""  class="off">
+                            <p>단골</p>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../sub/charge.html">
+                            <img src="../img/quick-charge.svg" alt="" class="on">
+                            <img src="../img/quick-charge_off.svg" alt=""  class="off">
+                            <p>페이충전</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../sub/login.html">
+                            <img src="../img/quick-login.svg" alt="">
+                            <p>로그인</p>
+                        </a>
+                    </li>
+                    <li class="center custom-button-1 custom-button-16" >
+                        <a href="#!">
+                            <img src="../img/quick-center_on.svg" alt="" class="on">
+                            <img src="../img/quick-center.svg" alt=""  class="off">
+                            <p>고객센터</p>
+                        </a>
+                    </li>
+                </ul>
+                <script>
+                    $('.quick-menu ul li').click(function(){
+                        $('.quick-menu ul li').removeClass('on');
+                        $(this).addClass('on');
+                    })
+                </script>
+            </article>
+        </main>
+    
+        <footer id="footer"></footer>
+        <button onclick="scrollToTop()" id="toTopBtn"></button>
+        <!-- 충전 금액 계산하기 모달 -->
+    </div>
+</body>
+</html>
