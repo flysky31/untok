@@ -83,7 +83,7 @@
             .flex{
                 align-items: center;
                 input[type=checkbox] + label{
-                  background: url("/img/checkbox_icon.png") no-repeat center left/20px 20px;
+                  background: url("../img/checkbox_icon.png") no-repeat center left/20px 20px;
                   width: 100%;
                   height: 20px;
                   margin: 0 5px 0 0;
@@ -91,7 +91,7 @@
                 }
                 
                 input[type=checkbox]:checked + label {
-                    background: url("/img/checkbox_active.png") no-repeat center left/20px 20px;
+                    background: url("../img/checkbox_active.png") no-repeat center left/20px 20px;
                 }
                 
                 span{
@@ -155,7 +155,7 @@
                 background: #2E457C;
             }
             &.naver{
-                background:url("/img/naver_icon.png")no-repeat #45A024;
+                background:url("../img/naver_icon.png")no-repeat #45A024;
                 background-size: 45px auto;
                 background-position:6% 0;
                 width: 100%;
@@ -163,7 +163,7 @@
             }
             &.kakao{
                 
-                background:url("/img/kakao_icon.png")no-repeat #FFEB3B;
+                background:url("../img/kakao_icon.png")no-repeat #FFEB3B;
                 background-size: 33px auto;
                 background-position: 7% 6px;
                 width: 100%;
@@ -611,11 +611,11 @@
                 
             }
             button{
-                background: url("/img/i_search.png")no-repeat 0 0px / 20px auto;
+                background: url("../img/i_search.png")no-repeat 0 0px / 20px auto;
                 width: 30px;
                 height: 20px;
                 @media (max-width:430px) {
-                    background: url("/img/i_search.png") no-repeat 5px 0px/18px auto;
+                    background: url("../img/i_search.png") no-repeat 5px 0px/18px auto;
                 }
             }
        }
@@ -709,7 +709,7 @@
                     justify-content: center;
                 }
                 i.star{
-                    background: url("/img/star_icon.png") no-repeat center 0px/15px auto;
+                    background: url("../img/star_icon.png") no-repeat center 0px/15px auto;
                     display: inline-block;
                     width: 20px;
                     height: 20px;
@@ -874,7 +874,7 @@
             position: relative; // 캘린더 아이콘을 클릭해야만 달력이 보이기 때문에 이 영역 자체를 제어하기 위해 설정 
             width: 100%;
             padding: 10px 30px 10px 10px;
-            background: url("/img/calendar.png") no-repeat right 10px center /
+            background: url("../img/calendar.png") no-repeat right 10px center /
                 20px auto #fff;  // 배경에 커스텀 아이콘을 넣어주자! x축은 오른쪽에서부터 10px 떨어지게 하고, y축은 가운데 정렬하고, width 35px에 height auto라는 크기를 부여한다.
             background-color: #fff;
             border:1px solid #ddd;
@@ -937,7 +937,7 @@
                 }
             }
             button{
-                background: url("/img/i_search.png")no-repeat 0 0px / 20px auto;
+                background: url("../img/i_search.png")no-repeat 0 0px / 20px auto;
                 width: 30px;
                 height: 20px;
                 // @media (max-width:430px) {
@@ -1057,7 +1057,7 @@
                     justify-content: center;
                 }
                 i.star{
-                    background: url("/img/star_icon.png") no-repeat center 0px/15px auto;
+                    background: url("../img/star_icon.png") no-repeat center 0px/15px auto;
                     display: inline-block;
                     width: 20px;
                     height: 20px;
@@ -1204,7 +1204,7 @@
             position: relative; // 캘린더 아이콘을 클릭해야만 달력이 보이기 때문에 이 영역 자체를 제어하기 위해 설정 
             width: 100%;
             padding: 10px 30px 10px 10px;
-            background: url("/img/calendar.png") no-repeat right 10px center /
+            background: url("../img/calendar.png") no-repeat right 10px center /
                 20px auto #fff; // 배경에 커스텀 아이콘을 넣어주자! x축은 오른쪽에서부터 10px 떨어지게 하고, y축은 가운데 정렬하고, width 35px에 height auto라는 크기를 부여한다.
             background-color: #fff;
             border:1px solid #ddd;
@@ -1289,7 +1289,7 @@
             position: relative; // 캘린더 아이콘을 클릭해야만 달력이 보이기 때문에 이 영역 자체를 제어하기 위해 설정 
             width: 100%;
             padding: 10px 30px 10px 10px;
-            background: url("/img/calendar.png") no-repeat right 10px center /
+            background: url("../img/calendar.png") no-repeat right 10px center /
                 20px auto #fff; // 배경에 커스텀 아이콘을 넣어주자! x축은 오른쪽에서부터 10px 떨어지게 하고, y축은 가운데 정렬하고, width 35px에 height auto라는 크기를 부여한다.
             background-color: #fff;
             border:1px solid #ddd;
@@ -1352,7 +1352,7 @@
                 }
             }
             button{
-                background: url("/img/i_search.png")no-repeat 0 0px / 20px auto;
+                background: url("../img/i_search.png")no-repeat 0 0px / 20px auto;
                 width: 30px;
                 height: 20px;
                 // @media (max-width:430px) {
@@ -1479,7 +1479,7 @@
                     justify-content: center;
                 }
                 i.star{
-                    background: url("/img/star_icon.png") no-repeat center 0px/15px auto;
+                    background: url("../img/star_icon.png") no-repeat center 0px/15px auto;
                     display: inline-block;
                     width: 20px;
                     height: 20px;
@@ -1626,7 +1626,7 @@
             position: relative; // 캘린더 아이콘을 클릭해야만 달력이 보이기 때문에 이 영역 자체를 제어하기 위해 설정 
             width: 100%;
             padding: 10px 30px 10px 10px;
-            background: url("/img/calendar.png") no-repeat right 10px center /
+            background: url("../img/calendar.png") no-repeat right 10px center /
                 20px auto #fff; // 배경에 커스텀 아이콘을 넣어주자! x축은 오른쪽에서부터 10px 떨어지게 하고, y축은 가운데 정렬하고, width 35px에 height auto라는 크기를 부여한다.
             background-color: #fff;
             border:1px solid #ddd;
@@ -1715,7 +1715,7 @@
             position: relative; // 캘린더 아이콘을 클릭해야만 달력이 보이기 때문에 이 영역 자체를 제어하기 위해 설정 
             width: 100%;
             padding: 10px 30px 10px 10px;
-            background: url("/img/calendar.png") no-repeat right 10px center /
+            background: url("../img/calendar.png") no-repeat right 10px center /
                 20px auto #fff; // 배경에 커스텀 아이콘을 넣어주자! x축은 오른쪽에서부터 10px 떨어지게 하고, y축은 가운데 정렬하고, width 35px에 height auto라는 크기를 부여한다.
             background-color: #fff;
             border:1px solid #ddd;
@@ -1778,7 +1778,7 @@
                 }
             }
             button{
-                background: url("/img/i_search.png")no-repeat 0 0px / 20px auto;
+                background: url("../img/i_search.png")no-repeat 0 0px / 20px auto;
                 width: 30px;
                 height: 20px;
                 // @media (max-width:430px) {
@@ -1908,7 +1908,7 @@
                     justify-content: center;
                 }
                 i.star{
-                    background: url("/img/star_icon.png") no-repeat center 0px/15px auto;
+                    background: url("../img/star_icon.png") no-repeat center 0px/15px auto;
                     display: inline-block;
                     width: 20px;
                     height: 20px;
@@ -2793,7 +2793,7 @@
                     border-radius: .25em;
                    
                     i{
-                        background: url("/img/file_icon.svg")no-repeat center/17px 17px;
+                        background: url("../img/file_icon.svg")no-repeat center/17px 17px;
                         display: inline-block;
                         width: 17px;
                         height: 17px;
@@ -2931,7 +2931,7 @@
                 position: relative; // 캘린더 아이콘을 클릭해야만 달력이 보이기 때문에 이 영역 자체를 제어하기 위해 설정 
                 width: auto;
                 padding: 10px 30px 10px 10px;
-                background: url("/img/calendar.png") no-repeat right 10px center /
+                background: url("../img/calendar.png") no-repeat right 10px center /
                     20px auto #fff; // 배경에 커스텀 아이콘을 넣어주자! x축은 오른쪽에서부터 10px 떨어지게 하고, y축은 가운데 정렬하고, width 35px에 height auto라는 크기를 부여한다.
                 background-color: #fff;
                 border-bottom:1px solid #ddd;
@@ -3064,11 +3064,11 @@
                 width: 23px;
                 height: 20px;
                 position: relative;
-                background: url("/img/checkbox_icon.png") no-repeat center/20px 20px;
+                background: url("../img/checkbox_icon.png") no-repeat center/20px 20px;
             }
 
             input[type=checkbox]:checked + label {
-                background: url("/img/checkbox_active.png") no-repeat center/20px 20px;
+                background: url("../img/checkbox_active.png") no-repeat center/20px 20px;
             }
             .l_txt{
                 margin: 0 0 0 10px;
@@ -3086,14 +3086,14 @@
         height: 45px;
         line-height: 45px;
         border:1px solid #ddd;
-        background: url("/img/select_arrow_g.png") no-repeat 88% 19px/12px #fff;
+        background: url("../img/select_arrow_g.png") no-repeat 88% 19px/12px #fff;
         outline: 0;
         border-radius: 10px;
         padding: 0 20px;
         text-align: center;
         font-size: 1rem;
         @media (max-width:768px) {
-            background: url("/img/select_arrow_g.png") no-repeat 88% 16px/12px #fff;
+            background: url("../img/select_arrow_g.png") no-repeat 88% 16px/12px #fff;
             height: 40px;
             line-height: 40px;
             width: 150px;
@@ -4354,7 +4354,7 @@
                         position: absolute;
                         top: 0;
                         left: -20px;
-                        background: url("/img/re_icon.png") no-repeat;
+                        background: url("../img/re_icon.png") no-repeat;
                         width: 20px;
                         height: 20px;
                     }
