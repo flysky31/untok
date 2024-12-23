@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="../css/member.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
     <script src="../js/nav.js"></script>
@@ -48,7 +47,7 @@
                         <a href="../sub/register_form.html" class="join font_medium">회원가입</a>
                     </div>
                     <div class="login_form">
-                        <form name="flogin" action="../index.html" onsubmit="return flogin_submit(this);" method="post" id="flogin"><form action="">
+                        <form name="flogin" action="#!" onsubmit="return flogin_submit(this);" method="post" id="flogin"><form action="">
                                 <input type="hidden" name="url" value="">
             
                             <label for="">
@@ -70,9 +69,7 @@
                         </form>
                     </div>               
                 </section>            
-            </div>
-            
-            
+            </div>           
             <script>
                 $(function(){
                     $("#login_auto_login").click(function(){
@@ -89,61 +86,59 @@
                     }
                     return false;
                 }
-            </script>
-            
-                    <article class="quick-menu">
-                        <ul>
-                            <li>
->                                <a href="../index.html">
-                                    <img src="../img/quick-home.svg" alt="" class="on">
-                                    <img src="../img/quick-home_off.svg" alt="" class="off">
-                                    <p>홈</p>
-                                </a>
-                            </li>
-                            <li class="on" >
-                                <a href="../sub/mypage/mypage.html">
-                                    <img src="/..img/quick-menu2.svg" alt="" class="on">
-                                    <img src="../img/quick-menu_off2.svg" alt=""  class="off">
-                                    <p>마이메뉴</p>
-                                </a>
-                            </li>
-                            <li >
-                                <a href="../sub/mypage/connexion.html">
-                                    <img src="../img/quick-heart.svg" alt="" class="on">
-                                    <img src="../img/quick-heart_off.svg" alt=""  class="off">
-                                    <p>단골</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../sub/charge.html">
-                                    <img src="../img/quick-charge.svg" alt="" class="on">
-                                    <img src="../img/quick-charge_off.svg" alt=""  class="off">
-                                    <p>페이충전</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../sub/login.html">
-                                    <img src="../img/quick-login.svg" alt="">
-                                    <p>로그인</p>
-                                </a>
-                            </li>
-                            <li class="center custom-button-1 custom-button-16" >
-                                <a href="#!">
-                                    <img src="../img/quick-center_on.svg" alt="" class="on">
-                                    <img src="../img/quick-center.svg" alt=""  class="off">
-                                    <p>고객센터</p>
-                                </a>
-                            </li>
-                        </ul>
-                        <script>
-                            $('.quick-menu ul li').click(function(){
-                                $('.quick-menu ul li').removeClass('on');
-                                $(this).addClass('on');
-                            })
-                        </script>
-                    </article>
-                </main>
-    
+            </script>            
+            <article class="quick-menu">
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <img src="../img/quick-home.svg" alt="" class="on">
+                            <img src="../img/quick-home_off.svg" alt="" class="off">
+                            <p>홈</p>
+                        </a>
+                    </li>
+                    <li class="on" >
+                        <a href="../sub/mypage/mypage.html">
+                            <img src="/..img/quick-menu2.svg" alt="" class="on">
+                            <img src="../img/quick-menu_off2.svg" alt=""  class="off">
+                            <p>마이메뉴</p>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../sub/mypage/connexion.html">
+                            <img src="../img/quick-heart.svg" alt="" class="on">
+                            <img src="../img/quick-heart_off.svg" alt=""  class="off">
+                            <p>단골</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../sub/charge.html">
+                            <img src="../img/quick-charge.svg" alt="" class="on">
+                            <img src="../img/quick-charge_off.svg" alt=""  class="off">
+                            <p>페이충전</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../sub/login.html">
+                            <img src="../img/quick-login.svg" alt="">
+                            <p>로그인</p>
+                        </a>
+                    </li>
+                    <li class="center custom-button-1 custom-button-16" >
+                        <a href="#!">
+                            <img src="../img/quick-center_on.svg" alt="" class="on">
+                            <img src="../img/quick-center.svg" alt=""  class="off">
+                            <p>고객센터</p>
+                        </a>
+                    </li>
+                </ul>
+                <script>
+                    $('.quick-menu ul li').click(function(){
+                        $('.quick-menu ul li').removeClass('on');
+                        $(this).addClass('on');
+                    })
+                </script>
+            </article>
+        </main>    
         <footer id="footer"></footer>
         <button onclick="scrollToTop()" id="toTopBtn"></button>
     </div>    
