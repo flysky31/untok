@@ -2169,7 +2169,7 @@
 }
 #time_choice .deps01 ul li .pay_area p .unpay big {
   font-size: 1.125rem;
-  margin: 0 3px 0 0;
+
 }
 @media (max-width: 768px) {
   #time_choice .deps01 ul li .pay_area .charge_pay {
