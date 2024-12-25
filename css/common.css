@@ -146,10 +146,10 @@ body {
   align-items: center;
 }
 .quick-menu ul li.on a img.on {
-  display: none;
+  display: block;
 }
 .quick-menu ul li.on a img.off {
-  display: block;
+  display: none;
 }
 .quick-menu ul li.on a p {
   color: #2E457C;
@@ -176,10 +176,10 @@ body {
   }
 }
 .quick-menu ul li a img.on {
-  display: block;
+  display: none;
 }
 .quick-menu ul li a img.off {
-  display: none;
+  display: block;
 }
 .quick-menu ul li a p {
   margin-top: 5px;
