@@ -1,1 +1,591 @@
 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운톡닷컴 페이충전</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap">
+    <link rel="stylesheet" href="../css/mobile_shop.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/member.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="headWrap">
+                <a href="../index.html" class="flex">
+                    <img src="../img/arrow_back.png" alt="뒤로가기" title=""> 페이충전안내</a>
+            </div>    
+        </header>
+        <main id="container">        
+            <div class="inner">
+                <section id="charge_visual" class="table">
+                    <div class="table_cell">
+                        <h2 class="sub_title">페이 구매</h2>
+                        <p>선불 결제하신 고객님들에게<br class="black_414"/> 할인 혜택을 드리고 있습니다.</p>
+                    </div>
+                </section>
+                <section id="prepayment">
+                    <div class="tab_box">
+                        <ul class="flex">
+                            <li><a href="/sub/charge.php">선불 충전</a></li>
+                            <li class="active"><a href="/sub/auto_charge.php">자동 충전</a></li>
+                        </ul>
+                    </div>
+                    <div class="banner auto_banner">
+                        <h3>자동충전</h3>
+                        <p>상담 중 통화가 끊어질까봐 걱정이라면?<br class="black_414"/> 자동충전을 이용해보세요!</p>
+                    </div>
+                    <div class="prepaid_box">
+                        <h4><b>자동 충전이란?</b></h4>
+                        <p>자동 충전 기능은 충전된 금액에 3분 미만일 때 설정하신 금액만큼 자동으로<br />충전되는 시스템입니다. 자동 충전은 마이페이지에서 언제든 설정 가능합니다.</p>
+                    </div>
+                    <div class="benefits flex">
+                        <div class="inner">
+                            <h3>VIP 리워드 혜택 안내</h3>
+                            <p>최대 10%까지 적립 가능한 혜택!</p>
+                        </div>
+                        <div class="more_btn">
+                            <a href="../sub/mypage/benefits.html">자세히 알아보기</a>
+                        </div>
+                    </div>
+                </section>
+                <section id="time_choice" class="auto_choice">
+                    <form name="frm" id="frm" action="./charge_auto_update.php" class="charge-wrap" method="post" >
+                        
+                        <h3>자동 충전 결제하기</h3>
+                        <div class="deps01">
+                            <h4>01 <i></i> <span>자동충전 금액 선택</span></h4>
+                            <ul class="clearfix">
+                                <li class="item_layer">
+                                    <div class="flex clearfix">
+                                        <input type="checkbox"  data-it_name="30000" data-price="33000"  id="cost1-1"  data-charge="30000" data-time="15"  class="myCheckbox"  name="it_id" value="1676374103">
+                                        <label for="cost1-1" data-price="33000" data-charge="30000"></label>
+                                    </div>
+                                    <div class="pay_area">
+                                        <p class="charge_pay">
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>30,000</big>운페이</span>
+                                        </p>
+                                        <p class="total_pay" style="display: none">
+                                            <span class="pay_left">결제금액</span><span class="unpay"><big>33,000</big>원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="item_layer">
+                                    <div class="flex clearfix">
+                                        <input type="checkbox"  data-it_name="50000" data-price="55000"  id="cost1-2"  data-charge="50000" data-time="20"  class="myCheckbox"  name="it_id" value="1676374361">
+                                        <label for="cost1-2" data-price="55000" data-charge="50000"></label>
+                                    </div>
+                                    <div class="pay_area">
+                                        <p class="charge_pay">
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>50,000</big>운페이</span>
+                                        </p>
+                                        <p class="total_pay" style="display: none">
+                                            <span class="pay_left">결제금액</span><span class="unpay"><big>55,000</big>원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="item_layer">
+                                    <div class="flex clearfix">
+                                        <input type="checkbox"  data-it_name="100000" data-price="110000"  id="cost1-3"  data-charge="100000" data-time="42"  class="myCheckbox"  name="it_id" value="1676374435">
+                                        <label for="cost1-3" data-price="110000" data-charge="100000"></label>
+                                    </div>
+                                    <div class="pay_area">
+                                        <p class="charge_pay">
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>100,000</big>운페이</span>
+                                        </p>
+                                        <p class="total_pay" style="display: none">
+                                            <span class="pay_left">결제금액</span><span class="unpay"><big>110,000</big>원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="item_layer">
+                                    <div class="flex clearfix">
+                                        <input type="checkbox"  data-it_name="200000" data-price="220000"  id="cost1-4"  data-charge="200000" data-time="80"  class="myCheckbox"  name="it_id" value="1676374531">
+                                        <label for="cost1-4" data-price="220000" data-charge="200000"></label>
+                                    </div>
+                                    <div class="pay_area">
+                                        <p class="charge_pay">
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>200,000</big>운페이</span>
+                                        </p>
+                                        <p class="total_pay" style="display: none">
+                                            <span class="pay_left">결제금액</span><span class="unpay"><big>220,000</big>원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="last_box item_layer">
+                                    <div class="flex">
+                                        <input type="checkbox" name="it_id" data-it_name="직접입력" value="outitem" id="check_last" class="myCheckbox">
+                                        <label for="check_last"></label>
+                                    </div>
+                                    <div class="pay_area">
+                                        <p>
+                                            <input type="number" name="pay_price" id="pay_price" placeholder="충전금액 직접입력">
+                                            <label for=""><span></span></label>
+                                        </p>
+                                        <p class="txt"><span>※ </span><span> 3만원부터 5,000원 단위로 충전이 가능하며<br> 최대 충전금액은 50만원입니다.</span></p>
+                                    </div>
+                                </li>
+                                <li class="last">
+                                    <a href="#!">충전금액 계산하기</a><i></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 결제수단 -->
+                        <div class="deps02">
+                            <h4>02 <i></i> <span>결제수단 선택</span></h4>
+                            <ol class="clearfix">
+                                <li class="flex">
+                                    <input id="Credit" name="cardtype" value="개인카드" type="checkbox" class="myCheckbox">
+                                    <label for="Credit"></label>
+                                    <span>개인카드</span>
+                                </li>
+                                <li class="flex">
+                                    <input id="Account" name="cardtype" value="법인카드"  type="checkbox" class="myCheckbox">
+                                    <label for="Account"></label>
+                                    <span>법인카드</span>
+                                </li>
+                            </ol>
+                        </div>
+                        <!-- 카드정보입력 -->
+                        <div class="card_information">
+                            <h4>카드정보입력</h4>
+                            <label for="birth"  id="birthLabel">
+                                <span class="first">생년월일</span>
+                                <div class="text_box">
+                                    <input type="number" id="birth" name="birth" value="" placeholder="생년월일6자리 ex)020105" maxlength="6" oninput="maxLengthCheck(this)" numberonly>
+                                </div>
+                            </label>
+                            <label for="bizID" id="bizIDLabel" style="display:none;">
+                                <span class="first">사업자등록번호</span>
+                                <div class="text_box">
+                                    <input type="number" id="bizID" name="bizid" value="" placeholder="사업자번호10자리 ex)1290011111" maxlength="10" oninput="maxLengthCheck(this)" numberonly>
+                                </div>
+                            </label>
+                            <label for="no">
+                                <span class="first">카드번호</span>
+                                <div class="text_box">
+                                    <input type="text" name="no" id="no" placeholder="'-' 없이 16자리 카드 번호 입력" numberonly maxlength="16"  oninput="maxLengthCheck(this)">
+                                </div>
+                            </label>
+                            <label for="">
+                                <span class="first">카드 유효기간</span>
+                                <div class="text_box text2">
+                                    <input type="number" placeholder="MM" name="month" maxlength="2" oninput="maxLengthCheck(this)"  class="win"><span>월</span>
+                                    <input type="number" name="year" placeholder="YY" maxlength="2" oninput="maxLengthCheck(this)" class="win"> <span>년</span>
+                                </div>
+                            </label>
+                            <label for="">
+                                <span class="first">카드비밀번호 앞 2자리</span>
+                                <div class="text_box">
+                                    <input type="password" placeholder="" name="cardpw" id="card-pw" maxlength="2">
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="all_btn">
+                            <a href="#" class="block order_btn">결제하기</a>
+                        </div>
+                        <input type="hidden" name="it_price" id="it_price">
+                        <input type="hidden" name="it_name" id="it_name">
+                        <input type="hidden" name="coinamt" id="coinamt">
+                    </form>
+                </section>
+            </div>
+            <script>
+                /*$('.auto_choice .deps02 ol li > .myCheckbox').click(function() {
+                    $('#alarm_modal').addClass('show');
+                });*/
+                $(document).ready(function() {
+                    // 체크박스 상태 변화 감지
+                    $('.deps02 .myCheckbox').change(function() {
+                        // 현재 선택된 체크박스의 id 가져오기
+                        let selectedId = $(this).attr('id');
+
+                        // 모든 체크박스 해제
+                        $('.deps02 .myCheckbox').prop('checked', false);
+
+                        // 선택한 체크박스만 선택 상태로 만들기
+                        $('#' + selectedId).prop('checked', true);
+
+                        // 선택된 체크박스에 따라서 표시
+                        if (selectedId === 'Credit') {
+                            $('#birthLabel').show();
+                            $('#bizIDLabel').hide();
+                        } else if (selectedId === 'Account') {
+                            $('#bizIDLabel').show();
+                            $('#birthLabel').hide();
+                        }
+                    });
+
+
+                    /*$("input:text[numberOnly]").on("keyup", function() {
+                        var element = $(this);
+                        setTimeout(function() {
+                            element.val(element.val().replace(/[^0-9]/g, ""));
+                        }, 1);
+                    });*/
+
+                });
+
+            /*  document.querySelectorAll('input[type=text][numberonly]').addEventListener('input', function(e){
+                    e.value = e.value.replace(/[^0-9]/g,'');
+                    console.log("click");
+                })*/
+
+                let isComposing = false;
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    const numberOnlyInputs = document.querySelectorAll('input[type=text][numberonly]');
+
+                    numberOnlyInputs.forEach(input => {
+                        input.addEventListener('compositionstart', () => {
+                            isComposing = true;
+                        });
+
+                        input.addEventListener('compositionend', () => {
+                            isComposing = false;
+                            setTimeout(() => {
+                                input.value = input.value.replace(/[^0-9]/g, '');
+                            }, 0);
+                        });
+
+                        input.addEventListener('input', (e) => {
+                            if (!isComposing) {
+                                setTimeout(() => {
+                                    e.target.value = e.target.value.replace(/[^0-9]/g, '');
+                                }, 0);
+                            }
+                        });
+                    });
+                });
+
+
+                //number값일때 최대값 체크하여 제한하기
+                function maxLengthCheck(object){
+                    if (object.value.length > object.maxLength){
+                        object.value = object.value.slice(0, object.maxLength);
+                    }
+                }
+            </script>
+            <style>
+                .price_input{
+                    display: block;
+                    margin: 10px 0 0;
+                    width: 100%;
+            /* background: url(/img/select_arrow_g.png) no-repeat right 7px center/12px #fff; */
+                    width: 100%;
+                    height: 40px;
+                    font-size: 14px;
+                    color: #AAAAAA;
+                    outline: 0;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    text-align: left;
+                    padding: 10px;
+                }
+            </style>
+
+            <form action="#!">
+                <div id="calculate" class="modal">
+                    <div class="modal-content">
+                        <h3>충전 금액 계산하기</h3>
+                        <a href="#!" class="close"><img src="../img/close_icon.png" alt="닫기버튼"></a>
+                        <div class="flex">
+                            <span class="block">상담 가격 (30초당)
+                                <select  name="point" id="cost_each" onchange="val_1=this.value">
+                                    <option value="0">0원</option>
+                                    <option value="1000">1,000원</option>
+                                    <option value="1200">1,200원</option>
+                                    <option value="1300">1,300원</option>
+                                    <option value="1500">1,500원</option>
+                                </select>
+                            </span>
+                            <span class="block">보유 코인
+                                <input type="text" class="price_input my_coin" value="0" onchange="val_2=this.value">
+                            </span>
+                        </div>
+                        <div class="total_btn" onclick="calcing(val_1,val_2)">
+                            <a href="#"><img src="../img/calc_icon.png" alt="" >계산하기</a>
+                        </div>
+                        <div class="timer">
+                            <p><span class="forminsec">0 분 0 초</span> 상담가능</p>
+                        </div>
+                        <div class="modal-buttons">
+                            <button type="button" id="calc_confirmBtn">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div id="terms_modal" class="modal">
+                <div class="modal-content">
+                    <h3 class="font_nomal">정보수집약관</h3>
+                    <a href="#!" class="close"><img src="/img/close_icon.png" alt="닫기버튼"></a>
+
+                    <div class="terms">
+                        <h4 class="font_small">결제정보 수집약관</h4>
+                        <p class="font_small">
+                            운톡닷컴의 결제정보 수집 약관이 들어갑니다.운톡닷컴의 결제정보 수집 약관이 들어갑니다. 운톡닷컴의 결제정보 수집 약관이 들어갑니다. 톡닷컴의 결제정보 수집 약관이 들어갑니다. 운톡닷컴의 결제정보 수집 약관이 들어갑니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 결제하기 알림 팝업 -->
+            <div id="alarm_modal" class="modal">
+                <div class="modal-content">
+                    <h3>알림</h3>
+
+                    <div class="alarm_txt">
+                        <p>다음과 같이 자동충전을 설정하시겠습니까?</p>
+                        <p>남은시간이 <span>3분 미만</span>이 되면<br />
+                            자동으로 <b>30,000(VAT별도)원</b>이 <span>결제</span>되어<br />
+                            <b>30,000페이</b>가 자동충전됩니다.</p>
+                    </div>
+                    <div class="modal-buttons">
+                        <button id="cancelBtn">취소</button>
+                        <button id="alarm_confirmBtn">확인</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <script>
+                //동의 체크 라벨 트리커 시키기
+                function triggerLabel() {
+                    document.querySelector('label[for="agree"]').click();
+                }
+
+                $('.item_layer .myCheckbox').click(function() {
+                    $(".item_layer").each(function(){
+                        $(this).removeClass('active');
+                        $(this).find('input[type=checkbox]').prop('checked',false);
+
+                    });
+                    $(this).closest('li').toggleClass('active');
+                    $(this).prop('checked',true);
+                    if ($(this).closest('li').hasClass('active')) {
+                        let checkTime = $(this).data('time');
+                        let checkPrice = $(this).data('price');
+                        let checkBay = $(this).data('charge');
+                        let it_id = $(this).val();
+                        //console.log(checkTime+" "+checkPrice+" "+checkBay+" "+it_id);
+
+                        if (it_id !="outitem") {
+                            $(".it_time").text(checkTime);
+                            $(".it_model").text(number_format(checkBay));
+                            $(".it_price").text(number_format(checkPrice));
+                            //$(".it_time").text(checkTime);
+                        }else{
+                            $(".it_time").text('');
+                            $(".it_model").text('');
+                            $(".it_price").text('');
+                        }
+                    }
+                });
+
+                $('.pay_layer .myCheckbox').click(function() {
+                    $(".pay_layer").each(function(){
+                        $(this).removeClass('active');
+                        $(this).find('input[type=checkbox]').prop('checked',false);
+
+                    });
+                    $(this).closest('li').toggleClass('active');
+                    $(this).prop('checked',true);
+                });
+
+                $(function(){
+                    //계산하기 닫기 버튼
+                    $("#calc_confirmBtn").click(function(){
+                        $("#calculate").removeClass('show');
+                    });
+                });
+
+
+                let val_1 = $('#cost_each option').eq(0).val();
+
+                let val_2 = '';
+                let val_result;
+                let val_seconds;
+                function calcing(val_1,val_2){
+                    if(!val_2){
+                        val_2 = $(".my_coin").val();
+                    }
+                    val_result = ((val_2 / val_1) * 30);
+                    val_seconds = val_result % 60;
+                    // console.log(Math.floor(val_result/60) + '분:' + Math.floor(val_seconds) + '초');
+                    //$('.forminsec').text(Math.floor(val_result/60)+"분 "+Math.floor(val_seconds)+'초');
+
+                }
+
+                $(function(){
+                    $(".order_btn").click(function(){
+
+                        /*let agree = $("input[name='agree']:checked").val();
+                        if(!agree){
+                            alert('결제 정보 수집 및 제공에 동의해 주세요.');
+                            return false;
+                        }*/
+                        if(!g5_is_member){
+                            alert("로그인 이후 이용가능합니다. 로그인후 이용해 주세요.");
+                            location.href='http://untok.tium.co.kr/bbs/login.php?url=/sub/auto_charge.php';
+                            return false;
+                        }
+
+                        it_id = $("input[name='it_id']:checked").val();
+                        if(!it_id){
+                            alert('충전할 요금제를 선택해 주세요.');
+                            return false;
+                        }
+                        if (it_id =="outitem") {
+                            if ($("input[name='pay_price']").val() =="") {
+                                alert("결제금액을 입력해주세요");
+                                return false;
+                            }
+                            it_price = $("input[name='pay_price']").val();
+                        }
+
+
+                        let card_type = "";
+                        $(".deps02 .myCheckbox").each(function(){
+                        if ($(this).prop('checked') ==true){
+                            card_type = $(this).val();
+                        }
+                        });
+                        if(card_type ==""){
+                            alert("결제수단을 선택해 주세요.");
+                            return false;
+                        }
+                        if (card_type =="개인카드"){
+                            if($("#birth").val() ==""){
+                                alert("생년월일을 입력해주세요.");
+                                $("#birth").focus();
+                                return false;
+                            }
+                        }else{
+                            if($("#bizID").val() ==""){
+                                alert("사업자번호를 입력해주세요.");
+                                $("#bizID").focus();
+                                return false;
+                            }
+                        }
+
+                        if($("input[name='no']").val() ==""){
+                            alert("카드번호를 입력해주세요.");
+                            $("input[name='no1']").focus();
+                            return false;
+                        }
+                        let cardno = $("input[name='no']").val();
+                        if (cardno.length !=16) {
+                            alert('카드번호를 정확히 입력해 주세요.');
+                            return false;
+                        }
+                        if($("input[name='month']").val() ==""){
+                            alert("카드번호 유효기간월을 입력해주세요.");
+                            $("input[name='month']").focus();
+                            return false;
+                        }
+                        if($("input[name='year']").val() ==""){
+                            alert("카드번호 유효기간년을 입력해주세요.");
+                            $("input[name='year']").focus();
+                            return false;
+                        }
+
+                        if($("#card-pw").val() ==""){
+                            alert("비밀번호를 입력해주세요.");
+                            $("#card-pw").focus();
+                            return false;
+                        }
+
+                        let chargePrice =0;
+                        // 부가세율
+                        let taxRate = 10; // %
+                        $(".item_layer").each(function(){
+                            if ($(this).hasClass('active')) {
+                                it_name = $(this).find('input').data('it_name');
+                                chargePrice = $(this).find('input').data('charge');
+                                it_price = $(this).find('input').data('price');
+                                if (it_id =="outitem") {
+                                    chargePrice = parseInt($("input[name='pay_price']").val());
+
+                                    // 부가세 구하기
+                                    var tax = chargePrice * (taxRate / 100);
+                                    it_price = chargePrice + tax;
+                                }
+                            }
+                        });
+                        $("input[name='it_price']").val(it_price);
+                        $("input[name='it_name']").val(it_name);
+                        $("input[name='coinamt']").val(chargePrice);
+                        $("#frm").submit();
+
+                    });
+                });
+            </script>
+            <article class="quick-menu">
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <img src="../img/quick-home.svg" alt="" class="on">
+                            <img src="../img/quick-home_off.svg" alt="" class="off">
+                            <p>홈</p>
+                        </a>
+                    </li>
+                    <li class="on" >
+                        <a href="../sub/mypage/mypage.html">
+                            <img src="/..img/quick-menu2.svg" alt="" class="on">
+                            <img src="../img/quick-menu_off2.svg" alt=""  class="off">
+                            <p>마이메뉴</p>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../sub/mypage/connexion.html">
+                            <img src="../img/quick-heart.svg" alt="" class="on">
+                            <img src="../img/quick-heart_off.svg" alt=""  class="off">
+                            <p>단골</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../sub/charge.html">
+                            <img src="../img/quick-charge.svg" alt="" class="on">
+                            <img src="../img/quick-charge_off.svg" alt=""  class="off">
+                            <p>페이충전</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../sub/login.html">
+                            <img src="../img/quick-login.svg" alt="">
+                            <p>로그인</p>
+                        </a>
+                    </li>
+                    <li class="center custom-button-1 custom-button-16" >
+                        <a href="#!">
+                            <img src="../img/quick-center_on.svg" alt="" class="on">
+                            <img src="../img/quick-center.svg" alt=""  class="off">
+                            <p>고객센터</p>
+                        </a>
+                    </li>
+                </ul>
+                <script>
+                    $('.quick-menu ul li').click(function(){
+                        $('.quick-menu ul li').removeClass('on');
+                        $(this).addClass('on');
+                    })
+                </script>
+            </article>
+        </main>
+        <footer id="footer"></footer>
+        <button onclick="scrollToTop()" id="toTopBtn"></button>
+    </div>    
+</body>
+</html>
