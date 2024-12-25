@@ -2196,6 +2196,9 @@
   border: solid 6px #2E457C;
   padding: 1.125rem;
 }
+#time_choice .deps02 ol li.active input[type=checkbox] + label{
+  background:url("../img/checkbox_active.png") no-repeat center/30px 30px;
+}
 @media (max-width: 768px) {
   #time_choice .deps02 ol li {
     padding: 15px;
