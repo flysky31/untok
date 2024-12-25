@@ -2825,7 +2825,11 @@
                 &.active{
                     border: solid 6px #2E457C;
                     padding: 1.125rem;
+                    input[type=checkbox] + label{
+                      background:url("../img/checkbox_active.png") no-repeat center/30px 30px;
+                    }
                 }
+
                 
                 @media (max-width:768px) {
                     padding: 15px;
