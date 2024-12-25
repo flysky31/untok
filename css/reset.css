@@ -39,7 +39,6 @@ input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;margin
 }
 html, body {
     width: 100%;
-    font-family: 'NanumSquareNeo-Variable';
     font-size: 16px;
     letter-spacing: -.5px;
     word-break: break-all!important;
@@ -740,6 +739,10 @@ button {
 
 
 
+#container #detail_area .menu_tab li a .sin_review_icon{
+    background: url("../img/sin_bubble_icon_on.png")no-repeat;
+    width: 18px;
+    height: 16px;
 #container #detail_area .menu_tab li a .sin_detail_icon{
     background: url("../img/sin_mark_icon_on.png")no-repeat;
     width: 18px;
@@ -751,10 +754,6 @@ button {
 }
 
 
-#container #detail_area .menu_tab li a .sin_review_icon{
-    background: url("../img/sin_bubble_icon_on.png")no-repeat;
-    width: 18px;
-    height: 16px;
     display: inline-block;
     background-size: 15px auto;
     position: relative;
