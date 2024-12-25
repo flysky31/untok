@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운톡닷컴 페이충전</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap">
+    <link rel="stylesheet" href="http://untok.tium.co.kr/js/font-awesome/css/font-awesome.min.css?ver=191202">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/member.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="headWrap">
+                <a href="../index.html" class="flex">
+                    <img src="../img/arrow_back.png" alt="뒤로가기" title=""> 로그인</a>
+            </div>    
+        </header>
+        <main id="container">
+            <div class="inner">
+                <section id="charge_visual" class="table">
+                    <div class="table_cell">
+                        <h2 class="sub_title">페이 구매</h2>
+                        <p>선불 결제하신 고객님들에게<br class="black_414"/> 할인 혜택을 드리고 있습니다.</p>
+                    </div>
+                </section>        
+                <section id="prepayment">
+                    <div class="tab_box">
+                        <ul class="flex">
+                            <li class="active"><a href="../sub/charge.html">선불 충전</a></li>
+                            <li><a href="../sub/auto_charge.html">자동 충전</a></li>
+                        </ul>
+                    </div>
+                    <div class="banner">
+                        <h3>선불충전</h3>
+                        <p>선불로 충전하신 고객님들에게<br class="black_414"/> 할인 혜택을 드리고 있습니다.</p>
+                    </div>
+                    <div class="prepaid_box">
+                        <h4><b>선불충전</b>이 유리한 이유</h4>
+                        <div class="list">
+                            <p class="table"><i class="table-cell"></i><span class="table-cell">할인 상담은 선결제 방식으로 추가 부가되지 않습니다.</span></p>
+                            <p class="table"><i class="table-cell"></i><span class="table-cell">할인 상담은 요금이 최소 23% ~ 최대 50%까지 할인됩니다.</span></p>
+                            <p class="table"><i class="table-cell"></i><span class="table-cell">할인 상담은 최소 비용으로 최대 상담시간 활용이 가능합니다.</span></p>
+                        </div>
+                    </div>
+                    <div class="use">
+                        <a href="../sub/use_info.html">이용방법안내</a>
+                    </div>
+                    <div class="auto_benefits flex">
+                        <div class="inner">
+                            <h3>결제가 번거로우면 <br class="block_500" />자동충전을 사용해보세요.</h3>
+                            <p>자동충전 설정 시 충전 금액의<br class="block_500" /> 최고 5% 리워드 제공합니다.</p>
+                        </div>
+                        <div class="more_btn">
+                            <a href="../sub/auto_charge.html">자세히 알아보기</a>
+                        </div>
+                    </div>
+                    <div class="benefits flex">
+                        <div class="inner">
+                            <h3>VIP 리워드 혜택 안내</h3>
+                            <p>최대 10%까지 적립 가능한 혜택!</p>
+                        </div>
+                        <div class="more_btn">
+                            <a href="../sub/mypage/benefits.html">자세히 알아보기</a>
+                        </div>
+                    </div>
+                </section>        
+                <section id="time_choice">
+                    <form action="#!">
+                        <input type="hidden"  name="od_name" id="od_name" value="" class="frm_input">
+                        <input type="hidden"  name="od_tel" id="od_tel" value="" class="frm_input">
+        
+                        <div class="deps01">
+                            <h4>01 <i></i> <span>상담시간 선택</span></h4>
+                            <ul class="clearfix">
+                                <li class="item_layer">
+                                    <div class="flex clearfix">
+                                        <input type="checkbox"  data-it_name="30000" data-price="33000"  id="cost1-1"  data-charge="30000" data-time="15"  class="myCheckbox"  name="it_id" value="1627028590">
+                                        <label for="cost1-1" data-price="33000" data-charge="30000"></label>
+                                        <!--<span><big></big>분</span>-->
+                                    </div>
+                                    <div class="pay_area">
+                                        <p class="charge_pay">
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>30,000</big>운페이</span>
+                                        </p>
+                                        <p class="total_pay" style="display: none">
+                                            <span class="pay_left">결제금액</span><span class="unpay"><big>33,000</big>원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="item_layer">
+                                    <div class="flex clearfix">
+                                        <input type="checkbox"  data-it_name="50000" data-price="55000"  id="cost1-2"  data-charge="50000" data-time=""  class="myCheckbox"  name="it_id" value="1627028529">
+                                        <label for="cost1-2" data-price="55000" data-charge="50000"></label>
+                                        <!--<span><big></big>분</span>-->
+                                    </div>
+                                    <div class="pay_area">
+                                        <p class="charge_pay">
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>50,000</big>운페이</span>
+                                        </p>
+                                        <p class="total_pay" style="display: none">
+                                            <span class="pay_left">결제금액</span><span class="unpay"><big>55,000</big>원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="item_layer">
+                                    <div class="flex clearfix">
+                                        <input type="checkbox"  data-it_name="100000" data-price="110000"  id="cost1-3"  data-charge="100000" data-time="52"  class="myCheckbox"  name="it_id" value="1628911573">
+                                        <label for="cost1-3" data-price="110000" data-charge="100000"></label>
+                                        <!--<span><big></big>분</span>-->
+                                    </div>
+                                    <div class="pay_area">
+                                        <p class="charge_pay">
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>100,000</big>운페이</span>
+                                        </p>
+                                        <p class="total_pay" style="display: none">
+                                            <span class="pay_left">결제금액</span><span class="unpay"><big>110,000</big>원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="item_layer">
+                                    <div class="flex clearfix">
+                                        <input type="checkbox"  data-it_name="200000" data-price="220000"  id="cost1-4"  data-charge="200000" data-time="106"  class="myCheckbox"  name="it_id" value="1627028740">
+                                        <label for="cost1-4" data-price="220000" data-charge="200000"></label>
+                                        <!--<span><big></big>분</span>-->
+                                    </div>
+                                    <div class="pay_area">
+                                        <p class="charge_pay">
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>200,000</big>운페이</span>
+                                        </p>
+                                        <p class="total_pay" style="display: none">
+                                            <span class="pay_left">결제금액</span><span class="unpay"><big>220,000</big>원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="item_layer">
+                                    <div class="flex clearfix">
+                                        <input type="checkbox"  data-it_name="300000" data-price="33000"  id="cost1-5"  data-charge="300000" data-time=""  class="myCheckbox"  name="it_id" value="1701064057">
+                                        <label for="cost1-5" data-price="33000" data-charge="300000"></label>
+                                        <!--<span><big></big>분</span>-->
+                                    </div>
+                                    <div class="pay_area">
+                                        <p class="charge_pay">
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>300,000</big>운페이</span>
+                                        </p>
+                                        <p class="total_pay" style="display: none">
+                                            <span class="pay_left">결제금액</span><span class="unpay"><big>33,000</big>원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="item_layer">
+                                    <div class="flex clearfix">
+                                        <input type="checkbox"  data-it_name="500000" data-price="550000"  id="cost1-6"  data-charge="500000" data-time="106"  class="myCheckbox"  name="it_id" value="1701066897">
+                                        <label for="cost1-6" data-price="550000" data-charge="500000"></label>
+                                        <!--<span><big></big>분</span>-->
+                                    </div>
+                                    <div class="pay_area">
+                                        <p class="charge_pay">
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>500,000</big>운페이</span>
+                                        </p>
+                                        <p class="total_pay" style="display: none">
+                                            <span class="pay_left">결제금액</span><span class="unpay"><big>550,000</big>원</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="last_box item_layer">
+                                    <div class="flex">
+                                        <input type="checkbox" name="it_id" data-it_name="직접입력" value="outitem" id="check_last" class="myCheckbox">
+                                        <label for="check_last"></label>        
+                                    </div>
+                                    <div class="pay_area">
+                                        <p>
+                                            <input type="number" name="pay_price" id="pay_price" placeholder="충전금액 직접입력">
+                                            <label for=""><span></span></label>
+                                        </p>
+                                        <p class="txt"><span>※ </span><span> 3만원부터 5,000원 단위로 충전이 가능하며<br> 최대 충전금액은 50만원입니다.</span></p>
+                                        <!--<div class="last_pay">
+                                            <p class="charge_pay">
+                                                <span class="pay_left">충전페이</span><span class="unpay"><big>0</big>운페이</span>
+                                            </p>
+                                            <p class="total_pay">
+                                                <span class="pay_left">결제금액</span><span class="unpay"><big>0</big>원</span>
+                                            </p>
+                                        </div>-->
+                                    </div>
+                                </li>
+                                <li class="last">
+                                    <a href="#!">충전금액 계산하기</a><i></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 결제수단 -->
+                        <div class="deps02">
+                            <h4>02 <i></i> <span>결제수단 선택</span></h4>
+                            <ol class="clearfix">
+                                <li class="flex pay_layer">
+                                    <input id="Credit" type="checkbox" class="myCheckbox" name="od_settle_case" value="신용카드">
+                                    <label for="Credit"></label>
+                                    <span>신용카드</span>
+                                </li>
+                                <li class="flex pay_layer">
+                                    <input id="Account" type="checkbox" class="myCheckbox" name="od_settle_case" value="가상계좌">
+                                    <label for="Account"></label>
+                                    <span>가상계좌(무통장입금)</span>
+                                </li>
+                                <li class="flex pay_layer">
+                                    <input id="naver_pay" type="checkbox" class="myCheckbox" name="od_settle_case" value="네이버페이">
+                                    <label for="naver_pay"></label>
+                                    <span>네이버 페이</span>
+                                </li>
+                                <li class="flex pay_layer">
+                                    <input id="kakao_pay" type="checkbox" class="myCheckbox" name="od_settle_case" value="카카오페이">
+                                    <label for="kakao_pay"></label>
+                                    <span>카카오 페이</span>
+                                </li>
+                                <li class="flex pay_layer">
+                                    <input id="payco" type="checkbox" class="myCheckbox" name="od_settle_case" value="페이코">
+                                    <label for="payco"></label>
+                                    <span>페이코</span>
+                                </li>
+                            </ol>
+                        </div>
+                        <!-- 결제하기 -->
+                        <div class="deps03">
+                            <h4>03 <i></i> <span>결제하기</span></h4>
+                            <div class="bor_box">
+                                <div class="flex" style="display: none">
+                                    <p>상담 시간</p><p><span class="it_time">0</span> 분</p>
+                                </div>
+                                <div class="flex">
+                                    <p>운페이</p><p><span class="it_model">0</span> 운페이</p>
+                                </div>
+                                <div class="flex">
+                                    <p>결제금액(VAT 포함)</p><p><span class="it_price">0</span> 원</p>
+                                </div>
+        
+                                <div class="agree_box">
+                                    <div class="ag_inner">
+                                        <input type="checkbox"  name="agree" value="1" id="agree">
+                                        <label for="agree"></label>
+                                        <span onclick="triggerLabel()">결제 정보 수집 및 제공 내용을 확인하였으며, 이에 동의합니다.</span>
+                                    </div>
+                                    <div class="agree_btn">
+                                        <a href="#!">내용보기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="all_btn">
+                            <a href="#" class="block order_btn">충전하기</a>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        
+        
+            <style>
+                .price_input{
+                    display: block;
+                    margin: 10px 0 0;
+                    width: 100%;
+                   /* background: url(/img/select_arrow_g.png) no-repeat right 7px center/12px #fff; */
+                    width: 100%;
+                    height: 40px;
+                    font-size: 14px;
+                    color: #AAAAAA;
+                    outline: 0;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    text-align: left;
+                    padding: 10px;
+                }
+            </style>
+            <!-- 충전 금액 계산하기 모달 -->
+            <form action="#!">
+                <div id="calculate" class="modal">
+                    <div class="modal-content">
+                        <h3>충전 금액 계산하기</h3>
+                        <a href="#!" class="close"><img src="../img/close_icon.png" alt="닫기버튼"></a>
+                        <div class="flex">
+                        <span class="block">상담 가격 (30초당)
+                            <select  name="point" id="cost_each" onchange="val_1=this.value">
+                                <option value="0">0원</option>
+                                <option value="1000">1,000원</option>
+                                <option value="1200">1,200원</option>
+                                <option value="1300">1,300원</option>
+                                <option value="1500">1,500원</option>
+                            </select>
+                        </span>
+                            <span class="block">보유 코인
+                          <!--<select name="" id="" class="">
+                            <option value="0">0</option>
+                            <option value="1000">1000</option>
+                            <option value="30000">30000</option>
+                        </select>-->
+                                <input type="text" class="price_input my_coin" value="0" onchange="val_2=this.value">
+                        </span>
+                        </div>
+                        <div class="total_btn" onclick="calcing(val_1,val_2)">
+                            <a href="#"><img src="../img/calc_icon.png" alt="" >계산하기</a>
+                        </div>
+                        <div class="timer">
+                            <p><span class="forminsec">0 분 0 초</span> 상담가능</p>
+                        </div>
+                        <div class="modal-buttons">
+                            <button type="button" id="calc_confirmBtn">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        
+            <!-- 정보수집약관 팝업 -->
+            <div id="terms_modal" class="modal">
+                <div class="modal-content">
+                    <h3 class="font_nomal">정보수집약관</h3>
+                    <a href="#!" class="close"><img src="../img/close_icon.png" alt="닫기버튼"></a>
+        
+                    <div class="terms">
+                        <h4 class="font_small">결제정보 수집약관</h4>
+                        <p class="font_small">
+                            (주)더메타링크(이하 회사라 칭함)은 개인정보 보호법 제30조에 따라 고객의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리지침을 공개합니다.
+        <br/>
+        <br/> 
+        <br/>
+        <br/>
+        <br/>제1조 개인정보의 처리 목적
+        <br/>
+        <br/> 
+        <br/>
+        <br/>① 회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보 보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
+        <br/>
+        <br/> 
+        <br/>
+        <br/>1. 회사는 이용자의 사전 동의 없이 이용자의 개인 정보를 공개하지 않으며, 다음과 같은 목적을 위하여 개인정보를 수집하고 이용합니다.
+        <br/>
+        <br/>1) 서비스 제공
+        <br/>
+        <br/>- 멤버십 등 기본적인 서비스 제공, 서비스 제공에 관한 계약 체결·유지·이행·관리·개선 및 서비스 제공에 따른 콘텐츠 서비스 이용, 구매 및 요금결제
+        <br/>
+        <br/>2) 회원관리
+        <br/>
+        <br/>- 회원제 서비스에 따른 본인 확인, 개인 식별, 불량회원의 부정 이용 방지와 비인가 사용 방지, 회원 가입∙유지∙탈퇴 의사 확인, 연령확인, 만 14세 미만 아동 개인정보수집 시 법정 대리인 동의 여부 확인, 법정 대리인 권리행사 시 본인 확인, 법령상 의무 이행, 법령 및 약관 위반 여부에 관한 조사, 고객 센터 운영 불만처리 등 민원 처리, 고지사항 전달 등
+        <br/>
+        <br/>3) 마케팅 및 광고에 활용
+        <br/>
+        <br/>- 신규 서비스(제품) 개발 및 특화, 뉴스레터, 이벤트 등 광고성 정보 전달, 인구통계학적 특성에 따른 서비스 제공 및 광고 게재, 마케팅 및 광고 등에 활용, 접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계
+        <br/>
+        <br/> 
+        <br/>
+        <br/>2. 수집한 개인정보 항목에 따른 이용 목적
+        <br/>
+        <br/>1) 성명, 아이디, 비밀번호 : 회원제 서비스 이용에 따른 본인 확인, 회원 가입·유지·탈퇴
+        <br/>
+        <br/>2) 이메일주소, 전화번호 : 고지사항 전달, 새로운 서비스 및 신상품이나 이벤트 정보 등의 안내, 불만처리 등을 위한 원활한 의사소통 경로의 확보
+        <br/>
+        <br/>3) 이메일, 전화번호 및 기타 선택 항목:개인맞춤 서비스를 제공하기 위한 자료, 마케팅 활동
+        <br/>
+        <br/> 
+        <br/>
+        <br/>
+        <br/>제2조 개인정보의 처리 및 보유기간
+        <br/>
+        <br/> 
+        <br/>
+        <br/>① 회사는 법령에 따른 개인정보 보유․이용기간 또는 고객으로부터 개인정보 수집시 동의 받은 개인정보 보유․이용기간 내에서 개인정보를 처리․보유합니다.
+        <br/>
+        <br/>1. 보유항목
+        <br/>
+        <br/>1) 회사의 필수 보유 항목 : 이용자의 성명, 아이디, 비밀번호, 이메일 주소, 휴대전화번호, 법정대리인정보(14세미만의 경우), 은행계좌정보, 서비스 이용기록, 접속 로그기록, 결제기록, 쿠키, IP 주소, 불량 이용 기록
+        <br/>
+        <br/>2) 고객 선택제공 항목 : 마케팅·이벤트 정보제공을 위하여 수집한 추가 개인정보
+        <br/>
+        <br/> 
+        <br/>
+        <br/>② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.
+        <br/>
+        <br/>1. &lt;(주)더메타링크&gt; 회원 가입 및 관리 : &lt;(주)더메타링크&gt; 탈퇴시까지
+        <br/>
+        <br/>(단, 다음의 사유에 해당하는 경우에는 해당 사유 종료시까지)
+        <br/>
+        <br/>1) - 보존 항목 : 닉네임, 로그인 ID
+        <br/>
+        <br/>- 보존 근거 : 회원 재가입 제어
+        <br/>
+        <br/>- 보존 기간 : 1개월
+        <br/>
+        <br/>2) 관계 법령 위반에 따른 수사.조사 등이 진행중인 경우에는 해당 수사.조사 종료시까지                </p>
+                    </div>
+                </div>
+            </div>
+        2024122606324786
+        
+        
+        <form name="forderform" id="forderform" method="post" action="http://untok.tium.co.kr/sub/orderformupdate.php" autocomplete="off">
+            <div id="sod_frm">
+        
+                <input type="hidden" name="it_id"    value="">
+                <input type="hidden" name="it_name"  value="">
+                <input type="hidden" name="it_price" value="">
+                <input type="hidden" name="od_name" value="">
+        
+                <input type="hidden" name="od_price"    value="">
+        
+                <input type="hidden" name="od_goods_name" value="">
+        
+        
+                
+        <input type="hidden" name="good_mny"    value="">
+        
+        
+        <input type="hidden" name="cpid"   value="0017">
+        <input type="hidden" name="oid"    value="2024122606324786">
+        <input type="hidden" name="membid"    value="">
+        <input type="hidden" name="mb_id"    value="">
+        
+        <input type="hidden" name="amount"      value="">
+        <input type="hidden" name="BUYERNAME"   value="">
+        <input type="hidden" name="telno"  value="">
+        <input type="hidden" name="BUYEREMAIL"  value="">
+        <input type="hidden" name="coinamt"       value="">
+        <input type="hidden" name="SettleName"    value="">
+        <input type="hidden" name="POPUP"  value="">
+        <input type="hidden" name="EventType"    value="1">
+        <!-- 결제방법 -->
+        <input type="hidden" name="PAYTYPE" value="">
+        
+        
+        <input type="hidden" name="returnurl"   value="https://untok.tium.co.kr/shop/mtonet/mtonet_return.php">
+        
+        
+        
+        
+        
+                            <input type="hidden" name="max_temp_point" value="0">
+                            <input type="hidden" name="od_temp_point" value="0" id="od_temp_point"  size="7"> 
+        
+                            <span style="display: none"><strong>보유포인트</strong>0점</span>
+                            <span style="display: none" class="max_point_box"><strong>최대 사용 가능 포인트</strong><em id="use_max_point">0점</em></span>
+        
+                <!-- } 결제 정보 입력 끝 -->
+        
+                
+        <!--<div id="display_pay_button" class="btn_confirm">
+            <input type="button" value="주문하기" onclick="forderform_check(this.form);" class="btn_submit">
+            <a href="/sub/charge.php" class="btn01">취소</a>
+        </div>
+        <div id="display_pay_process" style="display:none">
+            <img src="/shop/img/loading.gif" alt="">
+            <span>주문완료 중입니다. 잠시만 기다려 주십시오.</span>
+        </div>-->
+                
+        </form>
+        
+        
+        <script>
+            $(function(){
+                $("input[name='od_temp_point']").keyup(function(){
+                    var usepoint = $(this).val();
+                    if(usepoint > 0)
+                        calculate_total_price();
+                });
+            });
+            var form_action_url = "http://untok.tium.co.kr/sub/orderformupdate.php";
+            function forderform_check(f)
+            {
+                errmsg = "";
+                errfld = "";
+                var deffld = "";
+        
+                var od_price = parseInt(f.od_price.value);
+                var settle_method = $("input['od_settle_case']").val();
+        
+                var max_point = 0;
+                if (typeof(f.max_temp_point) != "undefined")
+                    max_point  = parseInt(f.max_temp_point.value);
+        
+                var temp_point = 0;
+                if (typeof(f.od_temp_point) != "undefined") {
+                    var point_unit = parseInt(100);
+                    temp_point = parseInt(f.od_temp_point.value) || 0;
+        
+                    if (f.od_temp_point.value) {
+                        if (temp_point > od_price) {
+                            alert("결제금액 보다 많이 포인트결제할 수 없습니다.");
+                            f.od_temp_point.select();
+                            return false;
+                        }
+        
+                        if (temp_point > 0) {
+                            alert("회원님의 포인트보다 많이 결제할 수 없습니다.");
+                            f.od_temp_point.select();
+                            return false;
+                        }
+        
+                        if (temp_point > max_point) {
+                            alert(max_point + "점 이상 결제할 수 없습니다.");
+                            f.od_temp_point.select();
+                            return false;
+                        }
+                        if(settle_method !="무통장"){
+                            more_price = od_price - temp_point;
+                            if(more_price < 2000){
+                                alert(settle_method+" 결제시 최소결제금액은 2,000원 이상 결제해야 됩니다 ");
+                                return false;
+                            }
+                        }
+                        // pg 결제 금액에서 포인트 금액 차감
+                        if(settle_method != "무통장") {
+                            f.good_mny.value = od_price - temp_point;
+                        }
+        
+                        if (parseInt(parseInt(temp_point / point_unit) * point_unit) != temp_point) {
+                            alert("포인트를 " + String(point_unit) + "점 단위로 입력하세요.");
+                            f.od_temp_point.select();
+                            return false;
+                        }
+                    }
+                }
+        
+                // pay_method 설정
+                        // 결제정보설정
+                
+                // 결제정보설정
+                        var ispopup ='';
+                var gsWin ="";
+                if(settle_method != "무통장") {
+                    if(settle_method == "신용카드") {
+                        //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
+                        var url = g5_shop_url + "/mtonet/mtonet_oreder_result.php"
+                        f.action = url;
+                        if (!ispopup) {
+                            //gsWin = window.open("about:blank", "winName", "width=800,height=800");
+                            gsWin = window.open("about:blank", "winName");
+                            f.target = "winName";
+                        }
+                        f.submit();
+                    }else if(settle_method == "네이버페이") {
+                        //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Naver/pay.jsp";
+                        var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                        f.action = url;
+                        if(!ispopup){
+                            gsWin = window.open("about:blank","winName", "width=800,height=800");
+                            f.target="winName";
+                        }
+                        f.submit();
+                    }else if(settle_method == "카카오페이") {
+                        //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Naver/pay.jsp";
+                        var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                        f.action = url;
+                        if(!ispopup){
+                            gsWin = window.open("about:blank","winName", "width=800,height=800");
+                            f.target="winName";
+                        }
+                        f.submit();
+                    }else if(settle_method == "가상계좌") {
+                        //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
+                        var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                        f.action = url;
+                        if(!ispopup){
+                            gsWin = window.open("about:blank","winName", "width=800,height=800");
+                            f.target="winName";
+                        }
+                        f.submit();
+                    }
+                } else {
+                    f.submit();
+                }
+                    }
+            function onPopupWindow(){
+                var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                var win =  window.open(null, 'winName', "top=10, left=10, width=400, height=400");
+                win.document.write('<iframe width="100%", height="100%" src="'+url+'" frameborder="0" allowfullscreen></iframe>');
+                history.back();
+            }
+        
+            function calculate_order_price()
+            {
+                var sell_price = parseInt($("input[name=od_price]").val());
+                var tot_price = sell_price ;
+        
+                $("input[name=good_mny]").val(tot_price);
+                $("#od_tot_price .print_price").text(number_format(String(tot_price)));
+                    }
+        
+            function calculate_temp_point()
+            {
+                var sell_price = parseInt($("input[name=od_price]").val());
+                var mb_point = parseInt(0);
+                var max_point = parseInt(10000);
+                var point_unit = parseInt(100);
+                var temp_point = max_point;
+        
+                if(temp_point > sell_price)
+                    temp_point = sell_price;
+        
+                if(temp_point > mb_point)
+                    temp_point = mb_point;
+        
+                temp_point = parseInt(temp_point / point_unit) * point_unit;
+        
+                $("#use_max_point").text(number_format(String(temp_point))+"점");
+                $("input[name=max_temp_point]").val(temp_point);
+            }
+        
+            function calculate_total_price()
+            {
+                var $it_prc = $("input[name^=it_price]");
+        
+                var tot_sell_price = sell_price =  0;
+                var it_price,  it_notax;
+                var tot_mny = comm_tax_mny = comm_vat_mny = comm_free_mny = tax_mny = vat_mny = 0;
+        
+        
+                $it_prc.each(function(index) {
+                    it_price = parseInt($(this).val());
+                    sell_price += it_price;
+                });
+        
+                tot_sell_price = sell_price;
+        
+                $("#ct_tot_price").text(number_format(String(tot_sell_price)));
+        
+                $("input[name=good_mny]").val(tot_sell_price);
+                $("input[name=od_price]").val(sell_price);
+        
+                //$("input[name=od_temp_point]").val(0);
+                        calculate_order_price();
+            }
+        
+        
+        </script>    <script>
+                //동의 체크 라벨 트리커 시키기
+                function triggerLabel() {
+                    document.querySelector('label[for="agree"]').click();
+                }
+        
+                $('.item_layer .myCheckbox').click(function() {
+                    $(".item_layer").each(function(){
+                       $(this).removeClass('active');
+                       $(this).find('input[type=checkbox]').prop('checked',false);
+        
+                    });
+                    $(this).closest('li').toggleClass('active');
+                    $(this).prop('checked',true);
+                    if ($(this).closest('li').hasClass('active')) {
+                        let checkTime = $(this).data('time');
+                        let checkPrice = $(this).data('price');
+                        let checkBay = $(this).data('charge');
+                        let it_id = $(this).val();
+                        //console.log(checkTime+" "+checkPrice+" "+checkBay+" "+it_id);
+        
+                        if (it_id !="outitem") {
+                            $(".it_time").text(checkTime);
+                            $(".it_model").text(number_format(checkBay));
+                            $(".it_price").text(number_format(checkPrice));
+                            //$(".it_time").text(checkTime);
+                        }else{
+                            $(".it_time").text('');
+                            $(".it_model").text('');
+                            $(".it_price").text('');
+                        }
+                    }
+                });
+        
+                $('.pay_layer .myCheckbox').click(function() {
+                    $(".pay_layer").each(function(){
+                        $(this).removeClass('active');
+                        $(this).find('input[type=checkbox]').prop('checked',false);
+        
+                    });
+                    $(this).closest('li').toggleClass('active');
+                    $(this).prop('checked',true);
+                });
+        
+                $(function(){
+                    $(".order_btn").click(function(){
+                        let agree = $("input[name='agree']:checked").val();
+                        if(!agree){
+                            alert('결제 정보 수집 및 제공에 동의해 주세요.');
+                            return false;
+                        }
+                        let temp_op = '2024122606324786';
+                        if(!temp_op){
+                            location.reload();
+                            return;
+                        }
+                        
+                        if(!g5_is_member){
+                            alert("로그인 이후 이용가능합니다. 로그인후 이용해 주세요.");
+                            location.href='http://untok.tium.co.kr/bbs/login.php?url=/sub/charge.php';
+                            return false;
+                        }
+        
+                        it_id = $("input[name='it_id']:checked").val();
+                        if(!it_id){
+                            alert('충전할 요금제를 선택해 주세요.');
+                            return false;
+                        }
+                        let it_price = 0;
+        
+                        //직접입력 일경우 충전금액 값 체트
+                        let putprice =0;
+        
+                        if (it_id =="outitem") {
+                            putprice = $("input[name='pay_price']").val();
+        
+                            if (putprice ==0) {
+                                alert("충전할 금액을 입력해 주세요.");
+                                $("input[name='pay_price]").focus();
+                                return false;
+                            }
+                            if(putprice < 5000) {
+                                alert("5,000이상으로 입력해 주세요.");
+                                return false;
+                            }
+                            if(putprice > 500000) {
+                                alert("500,000미만으로 입력해 주세요.");
+                                return false;
+                            }
+                            it_price = putprice;
+                        }
+                        if($("input[name='od_settle_case']").is(":checked") ==false){
+                            alert("결제방법을 선택해주세요");
+                            $("input[name='od_settle_case']").focus();
+                            return false;
+                        }
+                        let settle_case = $("input[name='od_settle_case']:checked").val();
+        
+                        /*if(settle_case =="네이버페이" ||settle_case =="카카오페이"){
+                            alert(settle_case +" 결제 준비중 입니다.");
+                            return false;
+                        }*/
+                        let mb_hp = $("#od_tel").val();
+                        //let user_pwd =$("#od_pw").val();
+                        let od_name = $("#od_name").val();
+        
+        
+                        set_case =$("input[name='od_settle_case']:checked").val();
+                        $("input[name='it_id']").val(it_id);
+        
+                        let it_name ="";
+                        let chargePrice =0;
+                        // 부가세율
+                        let taxRate = 10; // %
+                        $(".item_layer").each(function(){
+                            if ($(this).hasClass('active')) {
+                                it_name = $(this).find('input').data('it_name');
+                                chargePrice = $(this).find('input').data('charge');
+                                it_price = $(this).find('input').data('price');
+                                if (it_id =="outitem") {
+                                    chargePrice = parseInt($("input[name='pay_price']").val());
+        
+                                    // 부가세 구하기
+                                    var tax = chargePrice * (taxRate / 100);
+                                    it_price = chargePrice + tax;
+                                }
+                            }
+                        });
+                        $("input[name='it_price']").val(it_price);
+                        $("input[name='od_price']").val(it_price);
+                        $("input[name='good_mny']").val(it_price);
+                        $("input[name='it_name']").val(it_name);
+                        $("input[name='od_goods_name']").val(it_name);
+                        $("input[name='amount']").val(it_price);
+                        $("input[name='coinamt']").val(chargePrice);
+                        let PAYTYPE ="";
+                        switch (settle_case) {
+                            case '신용카드' :
+                                PAYTYPE ='1';
+                                break;
+                            case '가상계좌' :
+                                PAYTYPE ='3';
+                                break;
+                            case '네이버페이' :
+                                PAYTYPE ='4';
+                                break;
+                            case '카카오페이' :
+                                PAYTYPE ='5';
+                                break;
+                            case '페이코' :
+                                PAYTYPE ='6';
+                                break;
+                        }
+        
+                        $("input[name='PAYTYPE']").val(PAYTYPE);
+                        $("input[name='SettleName']").val(settle_case);
+                        /*$.ajax({
+                            url: "/060/check_passwd.php",
+                            type: "post",
+                            data: "od_name="+od_name+"&od_tel="+mb_hp+"&it_id="+it_id+"&set_case="+set_case+"&putprice="+putprice,
+                            cache   : false,
+                            async: false,
+                            success: function(response) {
+                                response =JSON.parse(response);
+                                if (response.msg)
+                                {
+                                    //alert(response.msg);
+                                    location.href="./order_form.php?return=http%3A%2F%2Funtok.tium.co.kr%2Fsub%2Fcharge.php";
+                                }else{
+                                    alert(response.msg);
+                                    return;
+                                }
+                            }
+                        });*/
+                        //데이터 백업
+                            // 주문정보 임시저장
+                            let f = document.forderform;
+                            let order_data = $(f).serialize();
+                            let save_result = "";
+                            $.ajax({
+                                type: "POST",
+                                data: order_data,
+                                url: g5_url+"/shop/ajax.orderdatasave.php",
+                                cache: false,
+                                async: false,
+                                success: function(data) {
+                                    save_result = data;
+                                }
+                            });
+        
+                            if(save_result) {
+                                alert(save_result);
+                                return false;
+                            }
+                        //$(".order_btn").hide();
+                        // 결제정보설정
+                                        var ispopup ='';
+                        var gsWin ="";
+                        if(settle_case != "무통장") {
+                            if(settle_case == "신용카드") {
+                                //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
+                                var url = g5_shop_url + "/mtonet/mtonet_oreder_result.php"
+                                f.action = url;
+                                if (!ispopup) {
+                                    //gsWin = window.open("about:blank", "winName", "width=800,height=800");
+                                    gsWin = window.open("about:blank", "winName");
+                                    f.target = "winName";
+                                }
+                                f.submit();
+                            }else if(settle_case == "네이버페이") {
+                                //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Naver/pay.jsp";
+                                var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                                f.action = url;
+                                if(!ispopup){
+                                    gsWin = window.open("about:blank","winName", "width=800,height=800");
+                                    f.target="winName";
+                                }
+                                f.submit();
+                            }else if(settle_case == "카카오페이") {
+                                //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Naver/pay.jsp";
+                                var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                                f.action = url;
+                                if(!ispopup){
+                                    gsWin = window.open("about:blank","winName", "width=800,height=800");
+                                    f.target="winName";
+                                }
+                                f.submit();
+                            }else if(settle_case == "가상계좌") {
+                                //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
+                                var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                                f.action = url;
+                                if(!ispopup){
+                                    gsWin = window.open("about:blank","winName", "width=800,height=800");
+                                    f.target="winName";
+                                }
+                                f.submit();
+                            }else if(settle_case == "페이코") {
+                                //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
+                                var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                                f.action = url;
+                                if(!ispopup){
+                                    gsWin = window.open("about:blank","winName", "width=800,height=800");
+                                    f.target="winName";
+                                }
+                                f.submit();
+                            }
+                        } else {
+                            f.submit();
+                        }
+                        
+        
+                    });
+        
+                    //계산하기 닫기 버튼
+                    $("#calc_confirmBtn").click(function(){
+                        $("#calculate").removeClass('show');
+                    });
+                });
+                $("input:text[numberOnly]").on("keyup", function() {
+                    $(this).val($(this).val().replace(/[^0-9]/g,""));
+                });
+        
+                let val_1 = $('#cost_each option').eq(0).val();
+        
+                let val_2 = '';
+                let val_result;
+                let val_seconds;
+                function calcing(val_1,val_2){
+                    if(!val_2){
+                        val_2 = $(".my_coin").val();
+                    }
+                    val_result = ((val_2 / val_1) * 30);
+                    val_seconds = val_result % 60;
+                    // console.log(Math.floor(val_result/60) + '분:' + Math.floor(val_seconds) + '초');
+                    $('.forminsec').text(Math.floor(val_result/60)+"분 "+Math.floor(val_seconds)+'초');
+        
+                }
+            </script>
+                <article class="quick-menu">
+                    <ul>
+                        <li>
+                            <a href="/">
+                                <img src="/img/quick-home.svg" alt="" class="on">
+                                <img src="/img/quick-home_off.svg" alt="" class="off">
+                                <p>홈</p>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="/sub/mypage/mypage.php">
+                                <img src="/img/quick-menu2.svg" alt="" class="on">
+                                <img src="/img/quick-menu_off2.svg" alt=""  class="off">
+                                <p>마이메뉴</p>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="/sub/mypage/connexion.php">
+                                <img src="/img/quick-heart.svg" alt="" class="on">
+                                <img src="/img/quick-heart_off.svg" alt=""  class="off">
+                                <p>단골</p>
+                            </a>
+                        </li>
+                        <li class="on" >
+                            <a href="/sub/charge.php">
+                                <img src="/img/quick-charge.svg" alt="" class="on">
+                                <img src="/img/quick-charge_off.svg" alt=""  class="off">
+                                <p>페이충전</p>
+                            </a>
+                        </li>
+                                        <li>
+                            <a href="http://untok.tium.co.kr/bbs/login.php">
+                                <img src="/img/quick-login.svg" alt="">
+                                <p>로그인</p>
+                            </a>
+                        </li>
+                                        <li class="center custom-button-1 custom-button-16" >
+                            <a href="#!">
+                                <img src="/img/quick-center_on.svg" alt="" class="on">
+                                <img src="/img/quick-center.svg" alt=""  class="off">
+                                <p>고객센터</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <script>
+                        $('.quick-menu ul li').click(function(){
+                            $('.quick-menu ul li').removeClass('on');
+                            $(this).addClass('on');
+                        })
+                    </script>
+                </article>
+        </main>
+        <footer id="footer"></footer>
+        <button onclick="scrollToTop()" id="toTopBtn"></button>
+    </div>    
+</body>
+</html>
