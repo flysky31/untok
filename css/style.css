@@ -2117,6 +2117,10 @@
 #time_choice .deps01 ul li.active .total_pay {
   color: #fff;
 }
+#time_choice .deps01 ul li.active .pay_area p.txt{
+    color: #fff;
+}
+
 #time_choice .deps01 ul li .pay_area {
   width: 100%;
 }
