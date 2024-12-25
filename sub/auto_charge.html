@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -75,7 +74,7 @@
                                     </div>
                                     <div class="pay_area">
                                         <p class="charge_pay">
-                                            <span class="pay_left">충전페이</span><span class="unpay"><big>30,000</big>운페이</span>
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>30,000</big><br>운페이</span>
                                         </p>
                                         <p class="total_pay" style="display: none">
                                             <span class="pay_left">결제금액</span><span class="unpay"><big>33,000</big>원</span>
@@ -89,7 +88,7 @@
                                     </div>
                                     <div class="pay_area">
                                         <p class="charge_pay">
-                                            <span class="pay_left">충전페이</span><span class="unpay"><big>50,000</big>운페이</span>
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>50,000</big><br>운페이</span>
                                         </p>
                                         <p class="total_pay" style="display: none">
                                             <span class="pay_left">결제금액</span><span class="unpay"><big>55,000</big>원</span>
@@ -103,7 +102,7 @@
                                     </div>
                                     <div class="pay_area">
                                         <p class="charge_pay">
-                                            <span class="pay_left">충전페이</span><span class="unpay"><big>100,000</big>운페이</span>
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>100,000</big><br>운페이</span>
                                         </p>
                                         <p class="total_pay" style="display: none">
                                             <span class="pay_left">결제금액</span><span class="unpay"><big>110,000</big>원</span>
@@ -117,7 +116,7 @@
                                     </div>
                                     <div class="pay_area">
                                         <p class="charge_pay">
-                                            <span class="pay_left">충전페이</span><span class="unpay"><big>200,000</big>운페이</span>
+                                            <span class="pay_left">충전페이</span><span class="unpay"><big>200,000</big><br>운페이</span>
                                         </p>
                                         <p class="total_pay" style="display: none">
                                             <span class="pay_left">결제금액</span><span class="unpay"><big>220,000</big>원</span>
@@ -228,21 +227,7 @@
                             $('#birthLabel').hide();
                         }
                     });
-
-
-                    /*$("input:text[numberOnly]").on("keyup", function() {
-                        var element = $(this);
-                        setTimeout(function() {
-                            element.val(element.val().replace(/[^0-9]/g, ""));
-                        }, 1);
-                    });*/
-
                 });
-
-            /*  document.querySelectorAll('input[type=text][numberonly]').addEventListener('input', function(e){
-                    e.value = e.value.replace(/[^0-9]/g,'');
-                    console.log("click");
-                })*/
 
                 let isComposing = false;
 
@@ -366,7 +351,7 @@
                     document.querySelector('label[for="agree"]').click();
                 }
 
-                $('.item_layer .myCheckbox').click(function() {
+                $('.item_layer').click(function() {
                     $(".item_layer").each(function(){
                         $(this).removeClass('active');
                         $(this).find('input[type=checkbox]').prop('checked',false);
