@@ -2727,6 +2727,11 @@
                            color:#fff;
                        }
                     }
+                    .flex {
+                        input[type=checkbox] + label{
+                          background:url("../img/checkbox_icon_w.png") no-repeat center/30px 30px;
+                        }
+                    }
                 }
                 .pay_area{
                     width: 100%;
