@@ -24,7 +24,7 @@
         <header id="header">
             <div class="headWrap">
                 <a href="../index.html" class="flex">
-                    <img src="../img/arrow_back.png" alt="뒤로가기" title=""> 로그인</a>
+                    <img src="../img/arrow_back.png" alt="뒤로가기" title=""> 충전안내</a>
             </div>    
         </header>
         <main id="container">
@@ -403,571 +403,542 @@
         
         
         <form name="forderform" id="forderform" method="post" action="http://untok.tium.co.kr/sub/orderformupdate.php" autocomplete="off">
-            <div id="sod_frm">
-        
+            <div id="sod_frm">        
                 <input type="hidden" name="it_id"    value="">
                 <input type="hidden" name="it_name"  value="">
                 <input type="hidden" name="it_price" value="">
-                <input type="hidden" name="od_name" value="">
-        
-                <input type="hidden" name="od_price"    value="">
-        
-                <input type="hidden" name="od_goods_name" value="">
-        
-        
-                
-        <input type="hidden" name="good_mny"    value="">
-        
-        
-        <input type="hidden" name="cpid"   value="0017">
-        <input type="hidden" name="oid"    value="2024122606324786">
-        <input type="hidden" name="membid"    value="">
-        <input type="hidden" name="mb_id"    value="">
-        
-        <input type="hidden" name="amount"      value="">
-        <input type="hidden" name="BUYERNAME"   value="">
-        <input type="hidden" name="telno"  value="">
-        <input type="hidden" name="BUYEREMAIL"  value="">
-        <input type="hidden" name="coinamt"       value="">
-        <input type="hidden" name="SettleName"    value="">
-        <input type="hidden" name="POPUP"  value="">
-        <input type="hidden" name="EventType"    value="1">
-        <!-- 결제방법 -->
-        <input type="hidden" name="PAYTYPE" value="">
-        
-        
-        <input type="hidden" name="returnurl"   value="https://untok.tium.co.kr/shop/mtonet/mtonet_return.php">
-        
-        
-        
-        
-        
-                            <input type="hidden" name="max_temp_point" value="0">
-                            <input type="hidden" name="od_temp_point" value="0" id="od_temp_point"  size="7"> 
-        
-                            <span style="display: none"><strong>보유포인트</strong>0점</span>
-                            <span style="display: none" class="max_point_box"><strong>최대 사용 가능 포인트</strong><em id="use_max_point">0점</em></span>
-        
-                <!-- } 결제 정보 입력 끝 -->
-        
-                
-        <!--<div id="display_pay_button" class="btn_confirm">
-            <input type="button" value="주문하기" onclick="forderform_check(this.form);" class="btn_submit">
-            <a href="/sub/charge.php" class="btn01">취소</a>
-        </div>
-        <div id="display_pay_process" style="display:none">
-            <img src="/shop/img/loading.gif" alt="">
-            <span>주문완료 중입니다. 잠시만 기다려 주십시오.</span>
-        </div>-->
-                
+                <input type="hidden" name="od_name" value="">        
+                <input type="hidden" name="od_price" value="">        
+                <input type="hidden" name="od_goods_name" value="">       
+                <input type="hidden" name="good_mny"    value="">        
+                <input type="hidden" name="cpid"   value="0017">
+                <input type="hidden" name="oid"    value="2024122606324786">
+                <input type="hidden" name="membid"    value="">
+                <input type="hidden" name="mb_id"    value="">        
+                <input type="hidden" name="amount"      value="">
+                <input type="hidden" name="BUYERNAME"   value="">
+                <input type="hidden" name="telno"  value="">
+                <input type="hidden" name="BUYEREMAIL"  value="">
+                <input type="hidden" name="coinamt"       value="">
+                <input type="hidden" name="SettleName"    value="">
+                <input type="hidden" name="POPUP"  value="">
+                <input type="hidden" name="EventType"    value="1">
+                <input type="hidden" name="PAYTYPE" value="">      
+                <input type="hidden" name="returnurl"   value="https://untok.tium.co.kr/shop/mtonet/mtonet_return.php">       
+                <input type="hidden" name="max_temp_point" value="0">
+                <input type="hidden" name="od_temp_point" value="0" id="od_temp_point"  size="7"> 
+                <span style="display: none"><strong>보유포인트</strong>0점</span>
+                <span style="display: none" class="max_point_box"><strong>최대 사용 가능 포인트</strong><em id="use_max_point">0점</em></span>
+            </div>
         </form>
         
-        
-        <script>
-            $(function(){
-                $("input[name='od_temp_point']").keyup(function(){
-                    var usepoint = $(this).val();
-                    if(usepoint > 0)
-                        calculate_total_price();
-                });
-            });
-            var form_action_url = "http://untok.tium.co.kr/sub/orderformupdate.php";
-            function forderform_check(f)
-            {
-                errmsg = "";
-                errfld = "";
-                var deffld = "";
-        
-                var od_price = parseInt(f.od_price.value);
-                var settle_method = $("input['od_settle_case']").val();
-        
-                var max_point = 0;
-                if (typeof(f.max_temp_point) != "undefined")
-                    max_point  = parseInt(f.max_temp_point.value);
-        
-                var temp_point = 0;
-                if (typeof(f.od_temp_point) != "undefined") {
-                    var point_unit = parseInt(100);
-                    temp_point = parseInt(f.od_temp_point.value) || 0;
-        
-                    if (f.od_temp_point.value) {
-                        if (temp_point > od_price) {
-                            alert("결제금액 보다 많이 포인트결제할 수 없습니다.");
-                            f.od_temp_point.select();
-                            return false;
-                        }
-        
-                        if (temp_point > 0) {
-                            alert("회원님의 포인트보다 많이 결제할 수 없습니다.");
-                            f.od_temp_point.select();
-                            return false;
-                        }
-        
-                        if (temp_point > max_point) {
-                            alert(max_point + "점 이상 결제할 수 없습니다.");
-                            f.od_temp_point.select();
-                            return false;
-                        }
-                        if(settle_method !="무통장"){
-                            more_price = od_price - temp_point;
-                            if(more_price < 2000){
-                                alert(settle_method+" 결제시 최소결제금액은 2,000원 이상 결제해야 됩니다 ");
-                                return false;
-                            }
-                        }
-                        // pg 결제 금액에서 포인트 금액 차감
-                        if(settle_method != "무통장") {
-                            f.good_mny.value = od_price - temp_point;
-                        }
-        
-                        if (parseInt(parseInt(temp_point / point_unit) * point_unit) != temp_point) {
-                            alert("포인트를 " + String(point_unit) + "점 단위로 입력하세요.");
-                            f.od_temp_point.select();
-                            return false;
-                        }
-                    }
-                }
-        
-                // pay_method 설정
-                        // 결제정보설정
-                
-                // 결제정보설정
-                        var ispopup ='';
-                var gsWin ="";
-                if(settle_method != "무통장") {
-                    if(settle_method == "신용카드") {
-                        //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
-                        var url = g5_shop_url + "/mtonet/mtonet_oreder_result.php"
-                        f.action = url;
-                        if (!ispopup) {
-                            //gsWin = window.open("about:blank", "winName", "width=800,height=800");
-                            gsWin = window.open("about:blank", "winName");
-                            f.target = "winName";
-                        }
-                        f.submit();
-                    }else if(settle_method == "네이버페이") {
-                        //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Naver/pay.jsp";
-                        var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
-                        f.action = url;
-                        if(!ispopup){
-                            gsWin = window.open("about:blank","winName", "width=800,height=800");
-                            f.target="winName";
-                        }
-                        f.submit();
-                    }else if(settle_method == "카카오페이") {
-                        //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Naver/pay.jsp";
-                        var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
-                        f.action = url;
-                        if(!ispopup){
-                            gsWin = window.open("about:blank","winName", "width=800,height=800");
-                            f.target="winName";
-                        }
-                        f.submit();
-                    }else if(settle_method == "가상계좌") {
-                        //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
-                        var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
-                        f.action = url;
-                        if(!ispopup){
-                            gsWin = window.open("about:blank","winName", "width=800,height=800");
-                            f.target="winName";
-                        }
-                        f.submit();
-                    }
-                } else {
-                    f.submit();
-                }
-                    }
-            function onPopupWindow(){
-                var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
-                var win =  window.open(null, 'winName', "top=10, left=10, width=400, height=400");
-                win.document.write('<iframe width="100%", height="100%" src="'+url+'" frameborder="0" allowfullscreen></iframe>');
-                history.back();
-            }
-        
-            function calculate_order_price()
-            {
-                var sell_price = parseInt($("input[name=od_price]").val());
-                var tot_price = sell_price ;
-        
-                $("input[name=good_mny]").val(tot_price);
-                $("#od_tot_price .print_price").text(number_format(String(tot_price)));
-                    }
-        
-            function calculate_temp_point()
-            {
-                var sell_price = parseInt($("input[name=od_price]").val());
-                var mb_point = parseInt(0);
-                var max_point = parseInt(10000);
-                var point_unit = parseInt(100);
-                var temp_point = max_point;
-        
-                if(temp_point > sell_price)
-                    temp_point = sell_price;
-        
-                if(temp_point > mb_point)
-                    temp_point = mb_point;
-        
-                temp_point = parseInt(temp_point / point_unit) * point_unit;
-        
-                $("#use_max_point").text(number_format(String(temp_point))+"점");
-                $("input[name=max_temp_point]").val(temp_point);
-            }
-        
-            function calculate_total_price()
-            {
-                var $it_prc = $("input[name^=it_price]");
-        
-                var tot_sell_price = sell_price =  0;
-                var it_price,  it_notax;
-                var tot_mny = comm_tax_mny = comm_vat_mny = comm_free_mny = tax_mny = vat_mny = 0;
-        
-        
-                $it_prc.each(function(index) {
-                    it_price = parseInt($(this).val());
-                    sell_price += it_price;
-                });
-        
-                tot_sell_price = sell_price;
-        
-                $("#ct_tot_price").text(number_format(String(tot_sell_price)));
-        
-                $("input[name=good_mny]").val(tot_sell_price);
-                $("input[name=od_price]").val(sell_price);
-        
-                //$("input[name=od_temp_point]").val(0);
-                        calculate_order_price();
-            }
-        
-        
-        </script>    <script>
-                //동의 체크 라벨 트리커 시키기
-                function triggerLabel() {
-                    document.querySelector('label[for="agree"]').click();
-                }
-        
-                $('.item_layer .myCheckbox').click(function() {
-                    $(".item_layer").each(function(){
-                       $(this).removeClass('active');
-                       $(this).find('input[type=checkbox]').prop('checked',false);
-        
-                    });
-                    $(this).closest('li').toggleClass('active');
-                    $(this).prop('checked',true);
-                    if ($(this).closest('li').hasClass('active')) {
-                        let checkTime = $(this).data('time');
-                        let checkPrice = $(this).data('price');
-                        let checkBay = $(this).data('charge');
-                        let it_id = $(this).val();
-                        //console.log(checkTime+" "+checkPrice+" "+checkBay+" "+it_id);
-        
-                        if (it_id !="outitem") {
-                            $(".it_time").text(checkTime);
-                            $(".it_model").text(number_format(checkBay));
-                            $(".it_price").text(number_format(checkPrice));
-                            //$(".it_time").text(checkTime);
-                        }else{
-                            $(".it_time").text('');
-                            $(".it_model").text('');
-                            $(".it_price").text('');
-                        }
-                    }
-                });
-        
-                $('.pay_layer .myCheckbox').click(function() {
-                    $(".pay_layer").each(function(){
-                        $(this).removeClass('active');
-                        $(this).find('input[type=checkbox]').prop('checked',false);
-        
-                    });
-                    $(this).closest('li').toggleClass('active');
-                    $(this).prop('checked',true);
-                });
-        
+            
+            <script>
                 $(function(){
-                    $(".order_btn").click(function(){
-                        let agree = $("input[name='agree']:checked").val();
-                        if(!agree){
-                            alert('결제 정보 수집 및 제공에 동의해 주세요.');
-                            return false;
-                        }
-                        let temp_op = '2024122606324786';
-                        if(!temp_op){
-                            location.reload();
-                            return;
-                        }
-                        
-                        if(!g5_is_member){
-                            alert("로그인 이후 이용가능합니다. 로그인후 이용해 주세요.");
-                            location.href='http://untok.tium.co.kr/bbs/login.php?url=/sub/charge.php';
-                            return false;
-                        }
-        
-                        it_id = $("input[name='it_id']:checked").val();
-                        if(!it_id){
-                            alert('충전할 요금제를 선택해 주세요.');
-                            return false;
-                        }
-                        let it_price = 0;
-        
-                        //직접입력 일경우 충전금액 값 체트
-                        let putprice =0;
-        
-                        if (it_id =="outitem") {
-                            putprice = $("input[name='pay_price']").val();
-        
-                            if (putprice ==0) {
-                                alert("충전할 금액을 입력해 주세요.");
-                                $("input[name='pay_price]").focus();
+                    $("input[name='od_temp_point']").keyup(function(){
+                        var usepoint = $(this).val();
+                        if(usepoint > 0)
+                            calculate_total_price();
+                    });
+                });
+                var form_action_url = "http://untok.tium.co.kr/sub/orderformupdate.php";
+                function forderform_check(f)
+                {
+                    errmsg = "";
+                    errfld = "";
+                    var deffld = "";
+            
+                    var od_price = parseInt(f.od_price.value);
+                    var settle_method = $("input['od_settle_case']").val();
+            
+                    var max_point = 0;
+                    if (typeof(f.max_temp_point) != "undefined")
+                        max_point  = parseInt(f.max_temp_point.value);
+            
+                    var temp_point = 0;
+                    if (typeof(f.od_temp_point) != "undefined") {
+                        var point_unit = parseInt(100);
+                        temp_point = parseInt(f.od_temp_point.value) || 0;
+            
+                        if (f.od_temp_point.value) {
+                            if (temp_point > od_price) {
+                                alert("결제금액 보다 많이 포인트결제할 수 없습니다.");
+                                f.od_temp_point.select();
                                 return false;
                             }
-                            if(putprice < 5000) {
-                                alert("5,000이상으로 입력해 주세요.");
+            
+                            if (temp_point > 0) {
+                                alert("회원님의 포인트보다 많이 결제할 수 없습니다.");
+                                f.od_temp_point.select();
                                 return false;
                             }
-                            if(putprice > 500000) {
-                                alert("500,000미만으로 입력해 주세요.");
+            
+                            if (temp_point > max_point) {
+                                alert(max_point + "점 이상 결제할 수 없습니다.");
+                                f.od_temp_point.select();
                                 return false;
                             }
-                            it_price = putprice;
-                        }
-                        if($("input[name='od_settle_case']").is(":checked") ==false){
-                            alert("결제방법을 선택해주세요");
-                            $("input[name='od_settle_case']").focus();
-                            return false;
-                        }
-                        let settle_case = $("input[name='od_settle_case']:checked").val();
-        
-                        /*if(settle_case =="네이버페이" ||settle_case =="카카오페이"){
-                            alert(settle_case +" 결제 준비중 입니다.");
-                            return false;
-                        }*/
-                        let mb_hp = $("#od_tel").val();
-                        //let user_pwd =$("#od_pw").val();
-                        let od_name = $("#od_name").val();
-        
-        
-                        set_case =$("input[name='od_settle_case']:checked").val();
-                        $("input[name='it_id']").val(it_id);
-        
-                        let it_name ="";
-                        let chargePrice =0;
-                        // 부가세율
-                        let taxRate = 10; // %
-                        $(".item_layer").each(function(){
-                            if ($(this).hasClass('active')) {
-                                it_name = $(this).find('input').data('it_name');
-                                chargePrice = $(this).find('input').data('charge');
-                                it_price = $(this).find('input').data('price');
-                                if (it_id =="outitem") {
-                                    chargePrice = parseInt($("input[name='pay_price']").val());
-        
-                                    // 부가세 구하기
-                                    var tax = chargePrice * (taxRate / 100);
-                                    it_price = chargePrice + tax;
+                            if(settle_method !="무통장"){
+                                more_price = od_price - temp_point;
+                                if(more_price < 2000){
+                                    alert(settle_method+" 결제시 최소결제금액은 2,000원 이상 결제해야 됩니다 ");
+                                    return false;
                                 }
                             }
-                        });
-                        $("input[name='it_price']").val(it_price);
-                        $("input[name='od_price']").val(it_price);
-                        $("input[name='good_mny']").val(it_price);
-                        $("input[name='it_name']").val(it_name);
-                        $("input[name='od_goods_name']").val(it_name);
-                        $("input[name='amount']").val(it_price);
-                        $("input[name='coinamt']").val(chargePrice);
-                        let PAYTYPE ="";
-                        switch (settle_case) {
-                            case '신용카드' :
-                                PAYTYPE ='1';
-                                break;
-                            case '가상계좌' :
-                                PAYTYPE ='3';
-                                break;
-                            case '네이버페이' :
-                                PAYTYPE ='4';
-                                break;
-                            case '카카오페이' :
-                                PAYTYPE ='5';
-                                break;
-                            case '페이코' :
-                                PAYTYPE ='6';
-                                break;
-                        }
-        
-                        $("input[name='PAYTYPE']").val(PAYTYPE);
-                        $("input[name='SettleName']").val(settle_case);
-                        /*$.ajax({
-                            url: "/060/check_passwd.php",
-                            type: "post",
-                            data: "od_name="+od_name+"&od_tel="+mb_hp+"&it_id="+it_id+"&set_case="+set_case+"&putprice="+putprice,
-                            cache   : false,
-                            async: false,
-                            success: function(response) {
-                                response =JSON.parse(response);
-                                if (response.msg)
-                                {
-                                    //alert(response.msg);
-                                    location.href="./order_form.php?return=http%3A%2F%2Funtok.tium.co.kr%2Fsub%2Fcharge.php";
-                                }else{
-                                    alert(response.msg);
-                                    return;
-                                }
+                            // pg 결제 금액에서 포인트 금액 차감
+                            if(settle_method != "무통장") {
+                                f.good_mny.value = od_price - temp_point;
                             }
-                        });*/
-                        //데이터 백업
-                            // 주문정보 임시저장
-                            let f = document.forderform;
-                            let order_data = $(f).serialize();
-                            let save_result = "";
-                            $.ajax({
-                                type: "POST",
-                                data: order_data,
-                                url: g5_url+"/shop/ajax.orderdatasave.php",
-                                cache: false,
-                                async: false,
-                                success: function(data) {
-                                    save_result = data;
-                                }
-                            });
-        
-                            if(save_result) {
-                                alert(save_result);
+            
+                            if (parseInt(parseInt(temp_point / point_unit) * point_unit) != temp_point) {
+                                alert("포인트를 " + String(point_unit) + "점 단위로 입력하세요.");
+                                f.od_temp_point.select();
                                 return false;
                             }
-                        //$(".order_btn").hide();
-                        // 결제정보설정
-                                        var ispopup ='';
-                        var gsWin ="";
-                        if(settle_case != "무통장") {
-                            if(settle_case == "신용카드") {
-                                //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
-                                var url = g5_shop_url + "/mtonet/mtonet_oreder_result.php"
-                                f.action = url;
-                                if (!ispopup) {
-                                    //gsWin = window.open("about:blank", "winName", "width=800,height=800");
-                                    gsWin = window.open("about:blank", "winName");
-                                    f.target = "winName";
-                                }
-                                f.submit();
-                            }else if(settle_case == "네이버페이") {
-                                //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Naver/pay.jsp";
-                                var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
-                                f.action = url;
-                                if(!ispopup){
-                                    gsWin = window.open("about:blank","winName", "width=800,height=800");
-                                    f.target="winName";
-                                }
-                                f.submit();
-                            }else if(settle_case == "카카오페이") {
-                                //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Naver/pay.jsp";
-                                var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
-                                f.action = url;
-                                if(!ispopup){
-                                    gsWin = window.open("about:blank","winName", "width=800,height=800");
-                                    f.target="winName";
-                                }
-                                f.submit();
-                            }else if(settle_case == "가상계좌") {
-                                //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
-                                var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
-                                f.action = url;
-                                if(!ispopup){
-                                    gsWin = window.open("about:blank","winName", "width=800,height=800");
-                                    f.target="winName";
-                                }
-                                f.submit();
-                            }else if(settle_case == "페이코") {
-                                //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
-                                var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
-                                f.action = url;
-                                if(!ispopup){
-                                    gsWin = window.open("about:blank","winName", "width=800,height=800");
-                                    f.target="winName";
-                                }
-                                f.submit();
+                        }
+                    }
+            
+                    // pay_method 설정
+                            // 결제정보설정
+                    
+                    // 결제정보설정
+                            var ispopup ='';
+                    var gsWin ="";
+                    if(settle_method != "무통장") {
+                        if(settle_method == "신용카드") {
+                            //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
+                            var url = g5_shop_url + "/mtonet/mtonet_oreder_result.php"
+                            f.action = url;
+                            if (!ispopup) {
+                                //gsWin = window.open("about:blank", "winName", "width=800,height=800");
+                                gsWin = window.open("about:blank", "winName");
+                                f.target = "winName";
                             }
-                        } else {
+                            f.submit();
+                        }else if(settle_method == "네이버페이") {
+                            //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Naver/pay.jsp";
+                            var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                            f.action = url;
+                            if(!ispopup){
+                                gsWin = window.open("about:blank","winName", "width=800,height=800");
+                                f.target="winName";
+                            }
+                            f.submit();
+                        }else if(settle_method == "카카오페이") {
+                            //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Naver/pay.jsp";
+                            var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                            f.action = url;
+                            if(!ispopup){
+                                gsWin = window.open("about:blank","winName", "width=800,height=800");
+                                f.target="winName";
+                            }
+                            f.submit();
+                        }else if(settle_method == "가상계좌") {
+                            //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
+                            var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                            f.action = url;
+                            if(!ispopup){
+                                gsWin = window.open("about:blank","winName", "width=800,height=800");
+                                f.target="winName";
+                            }
                             f.submit();
                         }
-                        
-        
-                    });
-        
-                    //계산하기 닫기 버튼
-                    $("#calc_confirmBtn").click(function(){
-                        $("#calculate").removeClass('show');
-                    });
-                });
-                $("input:text[numberOnly]").on("keyup", function() {
-                    $(this).val($(this).val().replace(/[^0-9]/g,""));
-                });
-        
-                let val_1 = $('#cost_each option').eq(0).val();
-        
-                let val_2 = '';
-                let val_result;
-                let val_seconds;
-                function calcing(val_1,val_2){
-                    if(!val_2){
-                        val_2 = $(".my_coin").val();
+                    } else {
+                        f.submit();
                     }
-                    val_result = ((val_2 / val_1) * 30);
-                    val_seconds = val_result % 60;
-                    // console.log(Math.floor(val_result/60) + '분:' + Math.floor(val_seconds) + '초');
-                    $('.forminsec').text(Math.floor(val_result/60)+"분 "+Math.floor(val_seconds)+'초');
-        
+                        }
+                function onPopupWindow(){
+                    var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                    var win =  window.open(null, 'winName', "top=10, left=10, width=400, height=400");
+                    win.document.write('<iframe width="100%", height="100%" src="'+url+'" frameborder="0" allowfullscreen></iframe>');
+                    history.back();
                 }
+            
+                function calculate_order_price()
+                {
+                    var sell_price = parseInt($("input[name=od_price]").val());
+                    var tot_price = sell_price ;
+            
+                    $("input[name=good_mny]").val(tot_price);
+                    $("#od_tot_price .print_price").text(number_format(String(tot_price)));
+                        }
+            
+                function calculate_temp_point()
+                {
+                    var sell_price = parseInt($("input[name=od_price]").val());
+                    var mb_point = parseInt(0);
+                    var max_point = parseInt(10000);
+                    var point_unit = parseInt(100);
+                    var temp_point = max_point;
+            
+                    if(temp_point > sell_price)
+                        temp_point = sell_price;
+            
+                    if(temp_point > mb_point)
+                        temp_point = mb_point;
+            
+                    temp_point = parseInt(temp_point / point_unit) * point_unit;
+            
+                    $("#use_max_point").text(number_format(String(temp_point))+"점");
+                    $("input[name=max_temp_point]").val(temp_point);
+                }
+            
+                function calculate_total_price()
+                {
+                    var $it_prc = $("input[name^=it_price]");
+            
+                    var tot_sell_price = sell_price =  0;
+                    var it_price,  it_notax;
+                    var tot_mny = comm_tax_mny = comm_vat_mny = comm_free_mny = tax_mny = vat_mny = 0;
+            
+            
+                    $it_prc.each(function(index) {
+                        it_price = parseInt($(this).val());
+                        sell_price += it_price;
+                    });
+            
+                    tot_sell_price = sell_price;
+            
+                    $("#ct_tot_price").text(number_format(String(tot_sell_price)));
+            
+                    $("input[name=good_mny]").val(tot_sell_price);
+                    $("input[name=od_price]").val(sell_price);
+            
+                    //$("input[name=od_temp_point]").val(0);
+                            calculate_order_price();
+                }
+            
+            
+            </script>    
+            <script>
+                    //동의 체크 라벨 트리커 시키기
+                    function triggerLabel() {
+                        document.querySelector('label[for="agree"]').click();
+                    }
+            
+                    $('.item_layer .myCheckbox').click(function() {
+                        $(".item_layer").each(function(){
+                        $(this).removeClass('active');
+                        $(this).find('input[type=checkbox]').prop('checked',false);
+            
+                        });
+                        $(this).closest('li').toggleClass('active');
+                        $(this).prop('checked',true);
+                        if ($(this).closest('li').hasClass('active')) {
+                            let checkTime = $(this).data('time');
+                            let checkPrice = $(this).data('price');
+                            let checkBay = $(this).data('charge');
+                            let it_id = $(this).val();
+                            //console.log(checkTime+" "+checkPrice+" "+checkBay+" "+it_id);
+            
+                            if (it_id !="outitem") {
+                                $(".it_time").text(checkTime);
+                                $(".it_model").text(number_format(checkBay));
+                                $(".it_price").text(number_format(checkPrice));
+                                //$(".it_time").text(checkTime);
+                            }else{
+                                $(".it_time").text('');
+                                $(".it_model").text('');
+                                $(".it_price").text('');
+                            }
+                        }
+                    });
+            
+                    $('.pay_layer .myCheckbox').click(function() {
+                        $(".pay_layer").each(function(){
+                            $(this).removeClass('active');
+                            $(this).find('input[type=checkbox]').prop('checked',false);
+            
+                        });
+                        $(this).closest('li').toggleClass('active');
+                        $(this).prop('checked',true);
+                    });
+            
+                    $(function(){
+                        $(".order_btn").click(function(){
+                            let agree = $("input[name='agree']:checked").val();
+                            if(!agree){
+                                alert('결제 정보 수집 및 제공에 동의해 주세요.');
+                                return false;
+                            }
+                            let temp_op = '2024122606324786';
+                            if(!temp_op){
+                                location.reload();
+                                return;
+                            }
+                            
+                            if(!g5_is_member){
+                                alert("로그인 이후 이용가능합니다. 로그인후 이용해 주세요.");
+                                location.href='http://untok.tium.co.kr/bbs/login.php?url=/sub/charge.php';
+                                return false;
+                            }
+            
+                            it_id = $("input[name='it_id']:checked").val();
+                            if(!it_id){
+                                alert('충전할 요금제를 선택해 주세요.');
+                                return false;
+                            }
+                            let it_price = 0;
+            
+                            //직접입력 일경우 충전금액 값 체트
+                            let putprice =0;
+            
+                            if (it_id =="outitem") {
+                                putprice = $("input[name='pay_price']").val();
+            
+                                if (putprice ==0) {
+                                    alert("충전할 금액을 입력해 주세요.");
+                                    $("input[name='pay_price]").focus();
+                                    return false;
+                                }
+                                if(putprice < 5000) {
+                                    alert("5,000이상으로 입력해 주세요.");
+                                    return false;
+                                }
+                                if(putprice > 500000) {
+                                    alert("500,000미만으로 입력해 주세요.");
+                                    return false;
+                                }
+                                it_price = putprice;
+                            }
+                            if($("input[name='od_settle_case']").is(":checked") ==false){
+                                alert("결제방법을 선택해주세요");
+                                $("input[name='od_settle_case']").focus();
+                                return false;
+                            }
+                            let settle_case = $("input[name='od_settle_case']:checked").val();
+            
+                            /*if(settle_case =="네이버페이" ||settle_case =="카카오페이"){
+                                alert(settle_case +" 결제 준비중 입니다.");
+                                return false;
+                            }*/
+                            let mb_hp = $("#od_tel").val();
+                            //let user_pwd =$("#od_pw").val();
+                            let od_name = $("#od_name").val();
+            
+            
+                            set_case =$("input[name='od_settle_case']:checked").val();
+                            $("input[name='it_id']").val(it_id);
+            
+                            let it_name ="";
+                            let chargePrice =0;
+                            // 부가세율
+                            let taxRate = 10; // %
+                            $(".item_layer").each(function(){
+                                if ($(this).hasClass('active')) {
+                                    it_name = $(this).find('input').data('it_name');
+                                    chargePrice = $(this).find('input').data('charge');
+                                    it_price = $(this).find('input').data('price');
+                                    if (it_id =="outitem") {
+                                        chargePrice = parseInt($("input[name='pay_price']").val());
+            
+                                        // 부가세 구하기
+                                        var tax = chargePrice * (taxRate / 100);
+                                        it_price = chargePrice + tax;
+                                    }
+                                }
+                            });
+                            $("input[name='it_price']").val(it_price);
+                            $("input[name='od_price']").val(it_price);
+                            $("input[name='good_mny']").val(it_price);
+                            $("input[name='it_name']").val(it_name);
+                            $("input[name='od_goods_name']").val(it_name);
+                            $("input[name='amount']").val(it_price);
+                            $("input[name='coinamt']").val(chargePrice);
+                            let PAYTYPE ="";
+                            switch (settle_case) {
+                                case '신용카드' :
+                                    PAYTYPE ='1';
+                                    break;
+                                case '가상계좌' :
+                                    PAYTYPE ='3';
+                                    break;
+                                case '네이버페이' :
+                                    PAYTYPE ='4';
+                                    break;
+                                case '카카오페이' :
+                                    PAYTYPE ='5';
+                                    break;
+                                case '페이코' :
+                                    PAYTYPE ='6';
+                                    break;
+                            }
+            
+                            $("input[name='PAYTYPE']").val(PAYTYPE);
+                            $("input[name='SettleName']").val(settle_case);
+                            /*$.ajax({
+                                url: "/060/check_passwd.php",
+                                type: "post",
+                                data: "od_name="+od_name+"&od_tel="+mb_hp+"&it_id="+it_id+"&set_case="+set_case+"&putprice="+putprice,
+                                cache   : false,
+                                async: false,
+                                success: function(response) {
+                                    response =JSON.parse(response);
+                                    if (response.msg)
+                                    {
+                                        //alert(response.msg);
+                                        location.href="./order_form.php?return=http%3A%2F%2Funtok.tium.co.kr%2Fsub%2Fcharge.php";
+                                    }else{
+                                        alert(response.msg);
+                                        return;
+                                    }
+                                }
+                            });*/
+                            //데이터 백업
+                                // 주문정보 임시저장
+                                let f = document.forderform;
+                                let order_data = $(f).serialize();
+                                let save_result = "";
+                                $.ajax({
+                                    type: "POST",
+                                    data: order_data,
+                                    url: g5_url+"/shop/ajax.orderdatasave.php",
+                                    cache: false,
+                                    async: false,
+                                    success: function(data) {
+                                        save_result = data;
+                                    }
+                                });
+            
+                                if(save_result) {
+                                    alert(save_result);
+                                    return false;
+                                }
+                            //$(".order_btn").hide();
+                            // 결제정보설정
+                                            var ispopup ='';
+                            var gsWin ="";
+                            if(settle_case != "무통장") {
+                                if(settle_case == "신용카드") {
+                                    //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
+                                    var url = g5_shop_url + "/mtonet/mtonet_oreder_result.php"
+                                    f.action = url;
+                                    if (!ispopup) {
+                                        //gsWin = window.open("about:blank", "winName", "width=800,height=800");
+                                        gsWin = window.open("about:blank", "winName");
+                                        f.target = "winName";
+                                    }
+                                    f.submit();
+                                }else if(settle_case == "네이버페이") {
+                                    //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Naver/pay.jsp";
+                                    var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                                    f.action = url;
+                                    if(!ispopup){
+                                        gsWin = window.open("about:blank","winName", "width=800,height=800");
+                                        f.target="winName";
+                                    }
+                                    f.submit();
+                                }else if(settle_case == "카카오페이") {
+                                    //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Naver/pay.jsp";
+                                    var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                                    f.action = url;
+                                    if(!ispopup){
+                                        gsWin = window.open("about:blank","winName", "width=800,height=800");
+                                        f.target="winName";
+                                    }
+                                    f.submit();
+                                }else if(settle_case == "가상계좌") {
+                                    //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
+                                    var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                                    f.action = url;
+                                    if(!ispopup){
+                                        gsWin = window.open("about:blank","winName", "width=800,height=800");
+                                        f.target="winName";
+                                    }
+                                    f.submit();
+                                }else if(settle_case == "페이코") {
+                                    //var url = "https://passcall.co.kr:28737/CPTL/Pay2/Card/pay.jsp";
+                                    var url = g5_shop_url+"/mtonet/mtonet_oreder_result.php"
+                                    f.action = url;
+                                    if(!ispopup){
+                                        gsWin = window.open("about:blank","winName", "width=800,height=800");
+                                        f.target="winName";
+                                    }
+                                    f.submit();
+                                }
+                            } else {
+                                f.submit();
+                            }
+                            
+            
+                        });
+            
+                        //계산하기 닫기 버튼
+                        $("#calc_confirmBtn").click(function(){
+                            $("#calculate").removeClass('show');
+                        });
+                    });
+                    $("input:text[numberOnly]").on("keyup", function() {
+                        $(this).val($(this).val().replace(/[^0-9]/g,""));
+                    });
+            
+                    let val_1 = $('#cost_each option').eq(0).val();
+            
+                    let val_2 = '';
+                    let val_result;
+                    let val_seconds;
+                    function calcing(val_1,val_2){
+                        if(!val_2){
+                            val_2 = $(".my_coin").val();
+                        }
+                        val_result = ((val_2 / val_1) * 30);
+                        val_seconds = val_result % 60;
+                        // console.log(Math.floor(val_result/60) + '분:' + Math.floor(val_seconds) + '초');
+                        $('.forminsec').text(Math.floor(val_result/60)+"분 "+Math.floor(val_seconds)+'초');
+            
+                    }
             </script>
-                <article class="quick-menu">
-                    <ul>
-                        <li>
-                            <a href="/">
-                                <img src="/img/quick-home.svg" alt="" class="on">
-                                <img src="/img/quick-home_off.svg" alt="" class="off">
-                                <p>홈</p>
-                            </a>
-                        </li>
-                        <li >
-                            <a href="/sub/mypage/mypage.php">
-                                <img src="/img/quick-menu2.svg" alt="" class="on">
-                                <img src="/img/quick-menu_off2.svg" alt=""  class="off">
-                                <p>마이메뉴</p>
-                            </a>
-                        </li>
-                        <li >
-                            <a href="/sub/mypage/connexion.php">
-                                <img src="/img/quick-heart.svg" alt="" class="on">
-                                <img src="/img/quick-heart_off.svg" alt=""  class="off">
-                                <p>단골</p>
-                            </a>
-                        </li>
-                        <li class="on" >
-                            <a href="/sub/charge.php">
-                                <img src="/img/quick-charge.svg" alt="" class="on">
-                                <img src="/img/quick-charge_off.svg" alt=""  class="off">
-                                <p>페이충전</p>
-                            </a>
-                        </li>
-                                        <li>
-                            <a href="http://untok.tium.co.kr/bbs/login.php">
-                                <img src="/img/quick-login.svg" alt="">
-                                <p>로그인</p>
-                            </a>
-                        </li>
-                                        <li class="center custom-button-1 custom-button-16" >
-                            <a href="#!">
-                                <img src="/img/quick-center_on.svg" alt="" class="on">
-                                <img src="/img/quick-center.svg" alt=""  class="off">
-                                <p>고객센터</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <script>
-                        $('.quick-menu ul li').click(function(){
-                            $('.quick-menu ul li').removeClass('on');
-                            $(this).addClass('on');
-                        })
-                    </script>
-                </article>
+            <article class="quick-menu">
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <img src="../img/quick-home.svg" alt="" class="on">
+                            <img src="../img/quick-home_off.svg" alt="" class="off">
+                            <p>홈</p>
+                        </a>
+                    </li>
+                    <li class="on" >
+                        <a href="../sub/mypage/mypage.html">
+                            <img src="/..img/quick-menu2.svg" alt="" class="on">
+                            <img src="../img/quick-menu_off2.svg" alt=""  class="off">
+                            <p>마이메뉴</p>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../sub/mypage/connexion.html">
+                            <img src="../img/quick-heart.svg" alt="" class="on">
+                            <img src="../img/quick-heart_off.svg" alt=""  class="off">
+                            <p>단골</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../sub/charge.html">
+                            <img src="../img/quick-charge.svg" alt="" class="on">
+                            <img src="../img/quick-charge_off.svg" alt=""  class="off">
+                            <p>페이충전</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../sub/login.html">
+                            <img src="../img/quick-login.svg" alt="">
+                            <p>로그인</p>
+                        </a>
+                    </li>
+                    <li class="center custom-button-1 custom-button-16" >
+                        <a href="#!">
+                            <img src="../img/quick-center_on.svg" alt="" class="on">
+                            <img src="../img/quick-center.svg" alt=""  class="off">
+                            <p>고객센터</p>
+                        </a>
+                    </li>
+                </ul>
+                <script>
+                    $('.quick-menu ul li').click(function(){
+                        $('.quick-menu ul li').removeClass('on');
+                        $(this).addClass('on');
+                    })
+                </script>
+            </article>
         </main>
         <footer id="footer"></footer>
         <button onclick="scrollToTop()" id="toTopBtn"></button>
