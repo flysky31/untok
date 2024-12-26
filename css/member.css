@@ -18,7 +18,7 @@
 #header .flex img {
   width: 17px;
   height: 17px;
-  margin: 3px 10px 0 0;
+  margin: 0 10px 0 0;
 }
 @media (max-width: 360px) {
   #header .flex img {
@@ -56,7 +56,7 @@
   color: #888;
   height: 40px;
   outline: 0;
-  border-radius: 5px;
+  /imdius: 5px;
   padding: 3px 10px;
   margin: 5px 0 0;
   box-shadow: none;
@@ -242,15 +242,13 @@
   right: 8px;
 }
 #my_menu .flex .right {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: right;
-    margin: 23px auto;
-    width: 60%;
-    text-align: right;
-    padding: 0 5% 0 0;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: right;
+  margin: 23px auto;
+  width: 70%;
+  text-align: center;
 }
 #my_menu .flex .right span {
   font-size: 18px;
@@ -266,29 +264,27 @@
   font-size: 40px;
   font-weight: 700;
   color: #E52C2C;
-  margin: 0 3px 0 0;
+  margin: 0 10px 0 0;
 }
 @media (max-width: 430px) {
   #my_menu .flex .right span big {
-    font-size: 25px;
-    margin:0;
+    font-size: 36px;
   }
 }
 #my_menu .flex .right a {
-    color: #2E457C;
-    display: flex;
-    align-items: center;
-    justify-content: right;
+  width: 120px;
+  color: #2E457C;
+  border: 1px solid #2E457C;
+  height: 27px;
+  line-height: 26px;
+  margin: 10px auto 0;
+  border-radius: 15px;
 }
 @media (max-width: 430px) {
   #my_menu .flex .right a {
     width: 90px;
   }
-#my_menu .flex .right a img{
-  width:18px;
-  margin:0 5px 0 0;
 }
-
 #my_menu .flex .right big {
   font-weight: 700;
   color: #2E457C;
