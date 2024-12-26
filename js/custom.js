@@ -6,7 +6,7 @@
                             $(this).addClass('on');
                         })
                             
-                        $('.tabs li').on('click', function () {
+                        $('.tabs li a').on('click', function () {
                             // 모든 탭 버튼의 'active' 클래스 제거
                             $('.tabs li').removeClass('on');
                             // 클릭한 탭 버튼에 'active' 클래스 추가
