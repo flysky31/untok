@@ -16,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/sns.js"></script>
+    <script src="js/custom.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -288,7 +289,10 @@
                         </li>
                     </ul>
                 </div>            
-                <article class="teacher-archive tab-panel on" id="tab1">   
+                <style>.tab-panel {display:none;}
+                    .tab-panel.on{display: block;}
+                </style>
+                <article class="teacher-archive tab-panel on" id="tab1" >   
                 
                     <style>
                         .titlefont{ font-family: 'East Sea Dokdo', cursive !important; font-size: 48px !important}
@@ -1689,36 +1693,7 @@
                     </li>
                 </ul>
                 <script>
-                    $('.quick-menu ul li').click(function(){
-                        $('.quick-menu ul li').removeClass('on');
-                        $(this).addClass('on');
-                    })
-
-                    $(function(){
-                          $('.tabs li').on('click', function () {
-                            // 모든 탭 버튼의 'active' 클래스 제거
-                            $('.tabs li').removeClass('on');
-                            // 클릭한 탭 버튼에 'active' 클래스 추가
-                            $(this).addClass('on');
-                        
-                            // 모든 탭 콘텐츠 숨김
-                            $('.tab-panel').removeClass('on');
-                            // 클릭한 탭 버튼과 연결된 콘텐츠 표시
-                            const target = $(this).data('tab');
-                            $('#' + target).addClass('on');
-                          });
-                        });
-
-                        $(function(){
-                            $('.review-cont').slideUp();
-                
-                            $('.review').click(function(){
-                
-                                $('.review-cont').stop().slideUp();
-                                $(this).parents().siblings('.review-cont').stop().slideToggle();
-                                $(this).find('i').toggleClass('active');
-                            });
-                        })
+ 
                     
                 </script>
             </article>
