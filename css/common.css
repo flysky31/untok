@@ -4,31 +4,31 @@
 
 @font-face {
   font-family: "a100";
-  src: url("/font/appleSD100.woff") format("woff");
+  src: url("../font/appleSD100.woff") format("woff");
 }
 @font-face {
   font-family: "a200";
-  src: url("/font/appleSD200.woff") format("woff");
+  src: url("../font/appleSD200.woff") format("woff");
 }
 @font-face {
   font-family: "appleSD400";
-  src: url("/font/appleSD400.woff") format("woff");
+  src: url("../font/appleSD400.woff") format("woff");
 }
 @font-face {
   font-family: "a500";
-  src: url("/font/appleSD500.woff") format("woff");
+  src: url("../font/appleSD500.woff") format("woff");
 }
 @font-face {
   font-family: "a600";
-  src: url("/font/appleSD600.woff") format("woff");
+  src: url("../font/appleSD600.woff") format("woff");
 }
 @font-face {
   font-family: "a700";
-  src: url("/font/appleSD700.woff") format("woff");
+  src: url("../font/appleSD700.woff") format("woff");
 }
 @font-face {
   font-family: "a800";
-  src: url("/font/appleSD800.woff") format("woff");
+  src: url("../font/appleSD800.woff") format("woff");
 }
 body {
   font-family: "appleSD400", "Noto Sans KR";
