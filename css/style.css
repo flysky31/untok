@@ -1695,7 +1695,7 @@
   padding: 35px 25px;
   background-position: right center;
   background-size: 180px auto;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 @media (max-width: 414px) {
   #prepayment .banner {
@@ -1718,7 +1718,7 @@
   padding: 35px 25px;
   background-position: right center;
   background-size: 600px auto;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 #prepayment .auto_banner h3 {
   color: #fff;
@@ -1793,7 +1793,7 @@
   width: 100%;
   padding: 20px 25px;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 15px;
   margin: 0 0 20px 0;
 }
 @media (max-width: 414px) {
@@ -1846,7 +1846,7 @@
   width: 100%;
   padding: 20px 25px;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 @media (max-width: 414px) {
   #prepayment .benefits {
@@ -2379,7 +2379,7 @@
   background: #76A6D0;
   height: 45px;
   line-height: 45px;
-  border-radius: 5px;
+  border-radius: 10px;
   font-weight: 600;
 }
 
