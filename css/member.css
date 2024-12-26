@@ -244,6 +244,7 @@
 #my_menu .flex .right {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   flex-direction: column;
   text-align: right;
   margin: 23px auto;
