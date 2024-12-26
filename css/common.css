@@ -149,7 +149,7 @@ body {
   display: block;
 }
 .quick-menu ul li.on a img.off {
-
+  display:none;
 }
 .quick-menu ul li.on a p {
   color: #2E457C;
