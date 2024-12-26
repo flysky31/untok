@@ -266,7 +266,7 @@
   font-size: 40px;
   font-weight: 700;
   color: #E52C2C;
-  margin: 0 10px 0 0;
+  margin: 0 3px 0 0;
 }
 @media (max-width: 430px) {
   #my_menu .flex .right span big {
