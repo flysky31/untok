@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -17,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/custom.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -95,7 +95,7 @@
                             <p>홈</p>
                         </a>
                     </li>
-                    <li class="on" >
+                    <li class="" >
                         <a href="../sub/mypage.html">
                             <img src="/..img/quick-menu2.svg" alt="" class="on">
                             <img src="../img/quick-menu_off2.svg" alt=""  class="off">
@@ -116,7 +116,7 @@
                             <p>페이충전</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="on">
                         <a href="../sub/login.html">
                             <img src="../img/quick-login.svg" alt="">
                             <p>로그인</p>
@@ -130,12 +130,6 @@
                         </a>
                     </li>
                 </ul>
-                <script>
-                    $('.quick-menu ul li').click(function(){
-                        $('.quick-menu ul li').removeClass('on');
-                        $(this).addClass('on');
-                    })
-                </script>
             </article>
         </main>    
         <footer id="footer"></footer>
