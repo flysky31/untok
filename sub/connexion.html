@@ -1,1 +1,318 @@
-
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운톡닷컴 단골관리</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap">
+    <link rel="stylesheet" href="http://untok.tium.co.kr/js/font-awesome/css/font-awesome.min.css?ver=191202">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/member.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="headWrap">
+                <a href="../index.html" class="flex">
+                    <img src="../img/arrow_back.png" alt="뒤로가기" title=""> 단골관리</a>
+            </div>    
+        </header>
+        <main id="container">
+            <section id="notice_wrap" class="">
+                <div class="flex">
+                    <p>
+                        <a href="../sub/notice.html">
+                            <b>[공지사항]</b> [신규상담사]안내공지입니다.</a>
+                    </p>
+                    <i></i>
+                </div>
+            </section>
+            <section id="connexion_tab" class="">
+                <div class="inner flex">
+                    <a href="../sub/connexion.html" class="active">상담사</a>
+                    <a href="../sub/connexion2.html">상품</a>
+                    <a href="../sub/connexion3.html">최근방문</a>
+                </div>
+                <form action="?" method="get">
+                <div class="inner flex">    
+                    <span class="flex">
+                        <input type="checkbox" name="stat"  id="con_ok" value="1" onchange="this.form.submit()">
+                        <label for="con_ok"></label>
+                        <span class="l_txt">상담 가능만 보기</span>
+                    </span>
+                    <select name="sca" id="sca" onchange="this.form.submit()">
+                        <option value="" selected>전체</option>
+                        <option value="신점" >신점</option>
+                        <option value="사주" >사주</option>
+                        <option value="타로" >타로</option>
+                        <option value="심리" >심리</option>
+                    </select>    
+                </div>
+                </form>
+            </section>            
+            <section id="list" class="" style="border-top:1px solid #ddd">
+                <article class="teacher-archive">
+                    <ul class="">    
+                        <li class="teacher  taro" style="background: url('../img/manager_653609a41991e/thumb-3696026081_OnywsxrC_f046866c9d7efed350a76e6e2c1b52652c94a9ea_180x170.png') no-repeat right bottom #E8DCEC">
+                            <div class="info">
+                                <a href="#!" class="close" data-wi_id="57"></a>
+                                <div class="name">
+                                    <em>타로</em>
+                                    <b>317</b>
+                                    <h4 class="titlefont">마벨라</h4>
+                                </div>    
+                                <div class="hash">
+                                    <em>#속마음,합격운,궁합,재물운,사업운</em>
+                                </div>    
+                                <div class="coment">
+                                    <p>
+                                        슬픔을 나누면 절반, 기쁨을 나누면 두배</p>
+                                </div>    
+                                <div class="status">
+                                    <p>(선불) 30초당 1000원</p>                                    
+                                    <a href="../sub/detail.html" class="">
+                                        <i><img src="../img/ico-tell.png" alt=""></i> 상담가능</a>
+                                </div>
+                            </div>                           
+    
+                            <a href="#!" class="review">
+                                후기
+                                <i><img src="../img/ico-arr-down.png" alt=""></i>
+                            </a>
+                        </li>
+    
+                        <li class="review-cont" style="display: none;">
+                            <h3>추천후기 (4)</h3>
+                            <ul>
+                                <li>
+                                    <a href="#!">
+                                        <p>
+                                            3개월만에  선생님과의 상담..!!
+                                            역시나  속시원한 답변 짱 입니다~^^
+                                            지난번  추천해주신 현장에서 3개월동안
+                                            계약도 많이 쓰고 성과가 좋았습니다~ㅎㅎ
+                                            그  현장이  완판되어   다른 현장으로
+                                            옮겨야하는  선택의  기로에서 또다시
+                                            선생님을  찾았네요~~
+                                            이번에도  선생님이 추천해주신 곳으로
+                                            출근하려고  합니다.
+                                            2가지 선택지를 두고  많은 고민이 있었는데 선생님 덕분에  속시원하게 결정했네요.  감사합니다~!!^^</p>
+                                        <em><i>★</i>5.0</em></a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <p>
+                                            &lt;p&gt;명랑한 목소리에 우울한 기분이 업되네요.&lt;/p&gt;&lt;p&gt;상담도 잘 해주시고 공감도 잘 해 주시고 잘 보듬어 주셔서 감사합니다.&lt;/p&gt;&lt;p&gt;어째거나 내가 더 노력 해야한다는 얘기가 힘을 줬어요 자주 올꺼 같아요 ~&lt;/p&gt;&lt;p&gt;상담 감사합니다.&lt;/p&gt;                                    </p>
+                                        <em><i>★</i>5.0</em></a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <p>
+                                            얼마전  회사에서  계약도 잘 안되고해서
+                                            답답한  마음에  선생님과  상담했는데
+                                            속시원하게  답변을 해주셔서  정말  도움이  많이  되었어요~!!   선생님이  추천해주신
+                                            현장으로  출근하기로 했답니다~ㅎㅎ
+                                            이번에는  계약 많이 쓸수 있을것 같아요~!!
+                                            
+                                            그리고  어제는  자녀문제로  상담했는데
+                                            넘 신기하게도  아이성격, 특성. 저와 아이와의 관계등  너무  그대로 말씀하셔서
+                                            깜짝 놀랬어요~!!
+                                            감사한  마음에  후기를 꼭  작성해야겠다는
+                                            생각이  들었어요~ㅎㅎ
+                                            꼭  예전부터  우리 아이를  봐왔던  사람처럼  말씀하셔서  신뢰감 상승입니다~!!
+                                            선생님이  조언해주신대로  아이와 대화를 하고  서로  조율해 나가볼 생각입니다.
+                                            명쾌한  답변과  현명한 조언  감사합니다~!
+                                            다음에  고민있을때  또  연락드릴께요~^^
+                                        </p>
+                                        <em><i>★</i>5.0</em></a>
+                                </li>                                
+                            </ul>    
+                            <a href="../sub/detail_review.html">더보기 +</a>
+                        </li>
+                    </ul>                
+                </article>
+            </section>            
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const closes = document.querySelectorAll('.info .close');
+        
+                    closes.forEach(close => {
+                        close.addEventListener('click', async () => {
+                            const wi_id = close.getAttribute('data-wi_id');
+                            document.querySelector("#wi_id").value=wi_id;
+                        });
+                    });
+                });
+                //단골삭제
+                document.addEventListener('DOMContentLoaded', () => {
+                    const connexions = document.querySelectorAll('#connexion_modal #con_confirmBtn');
+        
+                    connexions.forEach(connexion => {
+                        connexion.addEventListener('click', async () => {
+                            const wi_id = document.getElementById('wi_id').value;
+                            try {
+                                const response = await fetch('/inc/wish-action_del.php', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({
+                                        wi_id: wi_id
+                                    })
+                                });
+        
+                                const data = await response.json();
+                                    //alert("단골상담사를 단골 해지 하였습니다.");
+                                    location.reload();
+                            } catch (error) {
+                                console.error('Error:', error);
+                            }
+                        });
+                    });
+                });
+        
+                //이미지배열로 가져오기
+                const imageData = ["http:\/\/untok.tium.co.kr\/data\/member\/manager_653609a41991e\/thumb-3696026081_OnywsxrC_f046866c9d7efed350a76e6e2c1b52652c94a9ea_180x170.png"];
+                //백그라운 css 데이터 가져오기
+                const backData = ["no-repeat right bottom #E8DCEC"];
+                //반복되는 상담사 리스트
+                const teacherElements = document.querySelectorAll('.teacher');
+        
+                // teacherElements.forEach((teacher, index) => {
+                //     const imageUrl = `url(${imageData[index % imageData.length]})`;
+                //     const backCss = `${backData[index % backData.length]}`;
+                //     const backgroundStyle = `${imageUrl} no-repeat right bottom/160px ${backCss} `;
+                //     teacher.style.background  = backgroundStyle;
+        
+                // });
+        
+                $(function(){
+                    $('.review-cont').slideUp();
+        
+                    $('.review').click(function(){
+        
+                        $('.review-cont').stop().slideUp();
+                        $(this).parents().siblings('.review-cont').stop().slideToggle();
+                        $(this).find('i').toggleClass('active');
+                    });
+                })
+            </script>            
+            
+            <!-- 충전 금액 계산하기 모달 -->
+            <form action="#!">
+                <div id="calculate" class="modal">
+                    <div class="modal-content">
+                        <h3>충전 금액 계산하기</h3>
+                        <a href="#!" class="close"><img src="../img/close_icon.png" alt="닫기버튼"></a>
+                        <div class="flex">
+                        <span class="block">상담 가격 (30초당)
+                            <select name="" id="" class="">
+                            <option value="1,100원">1,100원</option>
+                            <option value="2,100원">2,100원</option>
+                            <option value="3,100원">3,100원</option>
+                        </select>
+                        </span>
+                            <span class="block">보유 코인
+                            <select name="" id="" class="">
+                            <option value="0">0</option>
+                            <option value="1000">1000</option>
+                            <option value="30000">30000</option>
+                        </select>
+                        </span>
+                        </div>
+                        <div class="total_btn">
+                            <a href=""><img src="../img/calc_icon.png" alt="">계산하기</a>
+                        </div>
+                        <div class="timer">
+                            <p><span>0 분 0 초</span> 상담가능</p>
+                        </div>
+                        <div class="modal-buttons">
+                            <button id="calc_confirmBtn">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- 단골해제 팝업  -->
+            <div id="connexion_modal" class="modal">
+                <input type="hidden" name="wi_id" id="wi_id">
+                <div class="modal-content">
+                    <h3>단골 해제</h3>
+                    <p>정말 웃음 톡톡 비타민 상담사를<br />
+                        단골 해제 하시겠습니까?</p>
+                    <div class="modal-buttons">
+                        <button id="con_confirmBtn">해제하기</button>
+                        <button id="con_cancelBtn" class="close">취소하기</button>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .quick-menu ul li.on a img.off{display: none;}
+            </style>    
+            <article class="quick-menu">
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <img src="../img/quick-home.svg" alt="" class="on">
+                            <img src="../img/quick-home_off.svg" alt="" class="off">
+                            <p>홈</p>
+                        </a>
+                    </li>
+                    <li class="on" >
+                        <a href="../sub/mypage.html">
+                            <img src="/..img/quick-menu2.svg" alt="" class="on">
+                            <img src="../img/quick-menu_off2.svg" alt=""  class="off">
+                            <p>마이메뉴</p>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../sub/connexion.html">
+                            <img src="../img/quick-heart.svg" alt="" class="on">
+                            <img src="../img/quick-heart_off.svg" alt=""  class="off">
+                            <p>단골</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../sub/charge.html">
+                            <img src="../img/quick-charge.svg" alt="" class="on">
+                            <img src="../img/quick-charge_off.svg" alt=""  class="off">
+                            <p>페이충전</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../sub/login.html">
+                            <img src="../img/quick-login.svg" alt="">
+                            <p>로그인</p>
+                        </a>
+                    </li>
+                    <li class="center custom-button-1 custom-button-16" >
+                        <a href="#!">
+                            <img src="../img/quick-center_on.svg" alt="" class="on">
+                            <img src="../img/quick-center.svg" alt=""  class="off">
+                            <p>고객센터</p>
+                        </a>
+                    </li>
+                </ul>
+                <script>
+                    $('.quick-menu ul li').click(function(){
+                        $('.quick-menu ul li').removeClass('on');
+                        $(this).addClass('on');
+                    })
+                </script>
+            </article>
+        </main>    
+        <footer id="footer"></footer>
+        <button onclick="scrollToTop()" id="toTopBtn"></button>
+    </div>    
+</body>
+</html>
