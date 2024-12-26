@@ -1,65 +1,32 @@
 
-    $(function (){
-        let $sca = '';
-        $(".tab ul li").each(function (){
-            if ($(this).hasClass('on')) {
-                $sca = $(this).data('case');
-            }
-        });
-        //get_memeber_list($sca,'','','','');
-        get_memeber_list('','','','','');
-        $(".tab ul li").click(function () {
-            $(".tab ul li").removeClass("on");
-            $sca = $(this).data('case');
-            $(this).addClass("on");
-            get_memeber_list($sca,'','','','');
-        });
 
-       /* setInterval(function() {
-            type = $("input[name='cate']").val();
-            get_memeber_list($sca,'','','','');
-        }, 100000);*/
-    });
+                    $(function(){
+                       $('.quick-menu ul li').click(function(){
+                            $('.quick-menu ul li').removeClass('on');
+                            $(this).addClass('on');
+                        })
+                            
+                        $('.tabs li').on('click', function () {
+                            // 모든 탭 버튼의 'active' 클래스 제거
+                            $('.tabs li').removeClass('on');
+                            // 클릭한 탭 버튼에 'active' 클래스 추가
+                            $(this).addClass('on');
+                        
+                            // 모든 탭 콘텐츠 숨김
+                            $('.tab-panel').removeClass('on');
+                            // 클릭한 탭 버튼과 연결된 콘텐츠 표시
+                            const target = $(this).data('tab');
+                            $('#' + target).addClass('on');
+                          });
+                        });
 
-
-    function get_memeber_list(type,page,ext,tab,search){
-        //console.log(type+"|"+page+"|"+ext);
-
-        $.ajax({
-            type:"POST",
-            url     : "/ajax/get_member_list.php",
-            data    : "sca="+type+"&page="+page+"&ext_id="+ext+"&tab="+tab+"&search="+search,
-            cache   : false,
-            async: false,
-            success : function(data) {
-
-                var list_data = JSON.parse(data);
-
-                $(this).find('.review-cont').slideUp();
-                if(list_data.msg ==""){
-                    $("#view_member_1").empty();
-                    //$("#view_member_1").html(list_data.data);
-                    //$("#view_member_1").remove();
-
-                    $("#view_member_1").html(list_data.data);
-                    //$("input[name='page']").val(list_data.page+1);
-                    //console.log(list_data.ext_id);
-                    /*if(ext_id !="")
-                        $("input[name='ext_id']").val(ext_id +","+list_data.ext_id);
-                    else{
-                        $("input[name='ext_id']").val(list_data.ext_id);
-                    }*/
-
-                    //get_stat();
-                }else{
-                    alert(list_data.msg);
-                }
-
-                //alert(data);
-                //location.reload();
-            },
-            error:function(request,status,error){
-                //alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
-            }
-        });
-    }
+                        $(function(){
+                            $('.review-cont').slideUp();
+                
+                            $('.review').click(function(){
+                
+                                $('.review-cont').stop().slideUp();
+                                $(this).parents().siblings('.review-cont').stop().slideToggle();
+                                $(this).find('i').toggleClass('active');
+                            });
+                        })
