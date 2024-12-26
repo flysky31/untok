@@ -246,7 +246,7 @@
             <section id="list">
                 <div class="tab">
                     <ul>
-                        <li  data-case="타로" data-tab="tab1" class="active">
+                        <li  data-case="타로" data-tab="tab1" class="on">
                             <a href="#!" >
                                 <figure>
                                     <img src="img/ico-tarot_on.png" alt="" class="on_icon">
@@ -288,7 +288,7 @@
                         </li>
                     </ul>
                 </div>            
-                <article class="teacher-archive tab-panel active" id="tab1">   
+                <article class="teacher-archive tab-panel on" id="tab1">   
                 
                     <style>
                         .titlefont{ font-family: 'East Sea Dokdo', cursive !important; font-size: 48px !important}
@@ -558,7 +558,7 @@
                             </li>
                         </ul>
                 </article>
-                <article class="teacher-archive tab-panel active" id="tab2">   
+                <article class="teacher-archive tab-panel" id="tab2">   
                 
                     <style>
                         .titlefont{ font-family: 'East Sea Dokdo', cursive !important; font-size: 48px !important}
@@ -828,7 +828,7 @@
                             </li>
                         </ul>
                 </article>
-                <article class="teacher-archive tab-panel active" id="tab3">   
+                <article class="teacher-archive tab-panel" id="tab3">   
                 
                     <style>
                         .titlefont{ font-family: 'East Sea Dokdo', cursive !important; font-size: 48px !important}
@@ -1098,7 +1098,7 @@
                             </li>
                         </ul>
                 </article>
-                <article class="teacher-archive tab-panel active" id="tab4">   
+                <article class="teacher-archive tab-panel" id="tab4">   
                 
                     <style>
                         .titlefont{ font-family: 'East Sea Dokdo', cursive !important; font-size: 48px !important}
@@ -1368,7 +1368,7 @@
                             </li>
                         </ul>
                 </article>
-                <article class="teacher-archive tab-panel active" id="tab5">   
+                <article class="teacher-archive tab-panel" id="tab5">   
                 
                     <style>
                         .titlefont{ font-family: 'East Sea Dokdo', cursive !important; font-size: 48px !important}
@@ -1697,12 +1697,12 @@
                     $(document).ready(function () {
                           $('.tabs li').on('click', function () {
                             // 모든 탭 버튼의 'active' 클래스 제거
-                            $('.tabs li').removeClass('active');
+                            $('.tabs li').removeClass('on');
                             // 클릭한 탭 버튼에 'active' 클래스 추가
                             $(this).addClass('active');
                         
                             // 모든 탭 콘텐츠 숨김
-                            $('.tab-panel').removeClass('active');
+                            $('.tab-panel').removeClass('on');
                             // 클릭한 탭 버튼과 연결된 콘텐츠 표시
                             const target = $(this).data('tab');
                             $('#' + target).addClass('active');
