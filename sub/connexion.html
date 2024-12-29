@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -142,73 +141,6 @@
                     </ul>                
                 </article>
             </section>            
-            
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const closes = document.querySelectorAll('.info .close');
-        
-                    closes.forEach(close => {
-                        close.addEventListener('click', async () => {
-                            const wi_id = close.getAttribute('data-wi_id');
-                            document.querySelector("#wi_id").value=wi_id;
-                        });
-                    });
-                });
-                //단골삭제
-                document.addEventListener('DOMContentLoaded', () => {
-                    const connexions = document.querySelectorAll('#connexion_modal #con_confirmBtn');
-        
-                    connexions.forEach(connexion => {
-                        connexion.addEventListener('click', async () => {
-                            const wi_id = document.getElementById('wi_id').value;
-                            try {
-                                const response = await fetch('/inc/wish-action_del.php', {
-                                    method: 'POST',
-                                    headers: {
-                                        'Content-Type': 'application/json'
-                                    },
-                                    body: JSON.stringify({
-                                        wi_id: wi_id
-                                    })
-                                });
-        
-                                const data = await response.json();
-                                    //alert("단골상담사를 단골 해지 하였습니다.");
-                                    location.reload();
-                            } catch (error) {
-                                console.error('Error:', error);
-                            }
-                        });
-                    });
-                });
-        
-                //이미지배열로 가져오기
-                const imageData = ["http:\/\/untok.tium.co.kr\/data\/member\/manager_653609a41991e\/thumb-3696026081_OnywsxrC_f046866c9d7efed350a76e6e2c1b52652c94a9ea_180x170.png"];
-                //백그라운 css 데이터 가져오기
-                const backData = ["no-repeat right bottom #E8DCEC"];
-                //반복되는 상담사 리스트
-                const teacherElements = document.querySelectorAll('.teacher');
-        
-                // teacherElements.forEach((teacher, index) => {
-                //     const imageUrl = `url(${imageData[index % imageData.length]})`;
-                //     const backCss = `${backData[index % backData.length]}`;
-                //     const backgroundStyle = `${imageUrl} no-repeat right bottom/160px ${backCss} `;
-                //     teacher.style.background  = backgroundStyle;
-        
-                // });
-        
-                $(function(){
-                    $('.review-cont').slideUp();
-        
-                    $('.review').click(function(){
-        
-                        $('.review-cont').stop().slideUp();
-                        $(this).parents().siblings('.review-cont').stop().slideToggle();
-                        $(this).find('i').toggleClass('active');
-                    });
-                })
-            </script>            
-            
             <!-- 충전 금액 계산하기 모달 -->
             <form action="#!">
                 <div id="calculate" class="modal">
@@ -251,7 +183,7 @@
                     <p>정말 웃음 톡톡 비타민 상담사를<br />
                         단골 해제 하시겠습니까?</p>
                     <div class="modal-buttons">
-                        <button id="con_confirmBtn">해제하기</button>
+                        <button id="con_confirmBtn" class="close">해제하기</button>
                         <button id="con_cancelBtn" class="close">취소하기</button>
                     </div>
                 </div>
