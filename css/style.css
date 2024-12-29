@@ -1,11 +1,11 @@
 @charset "UTF-8";
 #container {
-  padding-bottom: 70px;
+  padding-bottom: 110px;
   position: relative;
 }
 @media (max-width: 768px) {
   #container {
-    padding-bottom: 30px;
+    padding-bottom: 70px;
   }
 }
 #container #mv article.mvsw {
