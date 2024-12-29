@@ -26,3 +26,25 @@ $(function(){
             $(this).find('i').toggleClass('active');
         });
     })
+
+
+    //메인슬라이드 2
+   var teacherSw = new Swiper(".teacherSw", {     
+       slidesPerView: 5,
+       spaceBetween: 20,   
+       navigation: {
+           nextEl: ".teacher-next",
+           prevEl: ".teacher-prev",
+       },
+       breakpoints: {
+           640: {
+           slidesPerView: 5,
+           spaceBetween: 20,
+           },
+           480: {
+               slidesPerView: 4,
+               spaceBetween: 20,
+           },
+       },
+       //speed:1000,
+   });
