@@ -85,7 +85,10 @@
                     }
                     return false;
                 }
-            </script>            
+            </script>        
+            <style>
+                .quick-menu ul li.on a img.off{display:none;}
+            </style>
             <article class="quick-menu">
                 <ul>
                     <li>
@@ -118,7 +121,8 @@
                     </li>
                     <li class="on">
                         <a href="../sub/login.html">
-                            <img src="../img/quick-login.svg" alt="">
+                            <img src="../img/quick-login_on.svg" alt="" class="on">
+                            <img src="../img/quick-login.svg" alt="" class="off">
                             <p>로그인</p>
                         </a>
                     </li>
