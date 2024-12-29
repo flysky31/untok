@@ -277,7 +277,7 @@
 #my_menu .flex .right a {
   color: #2E457C;
   display:flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: right;
 }
 
