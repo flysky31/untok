@@ -1,1 +1,141 @@
-
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운톡닷컴 결제내역</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/member.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/sns.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="headWrap">
+                <a href="../index.html" class="flex" ><img src="../img/arrow_back.png" alt="뒤로가기"> 결제내역</a>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="../sub/member_edite.html"><i><img src="../img/ico-member.png" alt="" /></i>운톡닷컴<span>님</span></a>
+                        </li>
+                        <li>
+                            <a href="../sub/pay_detail.html">
+                                <i><img src="../img/ico-point.png" alt="" /></i><span>242,170</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#!" class="search">
+                        <img src="../img/ico-search.png" alt="" />
+                    </a>
+                </div>
+            </div>    
+        </header>    
+        <main id="container">
+            <section id="notice_wrap" class="">
+                <div class="flex">
+                    <p>
+                        <a href="../sub/notice.html">
+                            <b>[공지사항]</b> [신규상담사]안내공지입니다.            </a>
+                    </p>
+                    <i></i>
+                </div>
+            </section>            
+            <section id="pay_detail_list" class="margin_b">
+                <div class="inner">
+                    <h3>내 결제내역</h3>
+                    <form action="#!" name="search" id="search" method="get">
+                        <div class="inquiry_search flex">
+                            <div class="day_box">
+                                <input type="date" name="sdate" value="2023-05-29" placeholder="시작일"> <span> ~ </span> <input type="date" name="edate" value="2024-12-30"  placeholder="종료일">
+                                </div>
+                            <button type="submit">조회</button>
+                        </div>
+                        <ul class="flex">
+                            <li><a href="?month=1">1개월</a></li>
+                            <li><a href="?month=2">2개월</a></li>
+                            <li><a href="?month=3">3개월</a></li>
+                        </ul>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th class="wid5" >주문번호</th>
+                                <th  class="wid5">결제방식</th>
+                                <th  class="wid5">결제금액</th>
+                                <th  class="wid5">충전포인트</th>
+                                <!-- <th>사용포인트</th> -->
+                                <th class="wid5">결제일시</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </section>   
+            <style>
+                .quick-menu ul li.on a img.off{display:none;}
+            </style>
+            <article class="quick-menu">
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <img src="../img/quick-home.svg" alt="" class="on">
+                            <img src="../img/quick-home_off.svg" alt="" class="off">
+                            <p>홈</p>
+                        </a>
+                    </li>
+                    <li class="" >
+                        <a href="../sub/mypage.html">
+                            <img src="/..img/quick-menu2.svg" alt="" class="on">
+                            <img src="../img/quick-menu_off2.svg" alt=""  class="off">
+                            <p>마이메뉴</p>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../sub/connexion.html">
+                            <img src="../img/quick-heart.svg" alt="" class="on">
+                            <img src="../img/quick-heart_off.svg" alt=""  class="off">
+                            <p>단골</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../sub/charge.html">
+                            <img src="../img/quick-charge.svg" alt="" class="on">
+                            <img src="../img/quick-charge_off.svg" alt=""  class="off">
+                            <p>페이충전</p>
+                        </a>
+                    </li>
+                    <li class="on">
+                        <a href="../sub/login.html">
+                            <img src="../img/quick-login_on.svg" alt="" class="on">
+                            <img src="../img/quick-login.svg" alt="" class="off">
+                            <p>로그인</p>
+                        </a>
+                    </li>
+                    <li class="center custom-button-1 custom-button-16" >
+                        <a href="#!">
+                            <img src="../img/quick-center_on.svg" alt="" class="on">
+                            <img src="../img/quick-center.svg" alt=""  class="off">
+                            <p>고객센터</p>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+        </main>    
+        <footer id="footer"></footer>
+        <button onclick="scrollToTop()" id="toTopBtn"></button>
+    </div>
+</body>
+</html>
