@@ -2213,7 +2213,8 @@
     <div id="Consultus" class="modal show">
         <div class="modal-content">
             <div class="flex">
-                <img src="img/thumb-3696026081_hWVykxRZ_f9a9a18f5da46b72d588a9b82c3c0e981e6e322a_78x78.png" alt="" class="thumb">
+<!--                 <img src="img/thumb-3696026081_hWVykxRZ_f9a9a18f5da46b72d588a9b82c3c0e981e6e322a_78x78.png" alt="" class="thumb"> -->
+                <div class="modal-image"></div>
                 <div class="block">
                     <h3 class="font_big">연수보살</h3>
                     <span class="font_nomal">상담사에게 상담 받으시겠습니까?</span>
@@ -2252,14 +2253,43 @@
     </div>
 </form>
     <script>
-    $(".possible").on("click",function(e){
+    // $(".possible").on("click",function(e){
 
-          $("#Consultus").addClass("show");
-      });
-            $("#Consultus_Btn").on("click",function(e){
+    //       $("#Consultus").addClass("show");
+    //   });
+    //         $("#Consultus_Btn").on("click",function(e){
 
-          $("#Consultus").removeClass("show");
-      });
+    //       $("#Consultus").removeClass("show");
+    //   });
+
+        // 링크와 모달 요소 선택
+const links = document.querySelectorAll('.possible');
+const modal = document.getElementById('Consultus');
+const modalImage = document.querySelector('.modal-image');
+const closeButton = document.getElementById('#Consultus_Btn');
+
+// 링크 클릭 이벤트 추가
+links.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault(); // 기본 동작 방지
+    const bgImage = getComputedStyle(link).backgroundImage; // 클릭한 링크의 배경 이미지 가져오기
+    modalImage.style.backgroundImage = bgImage; // 모달에 배경 이미지 설정
+    modal.style.display = 'flex'; // 모달 열기
+  });
+});
+
+// 모달 닫기 버튼 클릭 이벤트 추가
+closeButton.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// 모달 외부 클릭 시 닫기
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
     </script>
 </body>
 </html>
