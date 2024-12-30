@@ -2252,23 +2252,13 @@
     </div>
 </form>
     <script>
-          $(document).on("click",".paytypeOn",function(e){
-          //$(".paytypeOn").click(function(e){
-          e.preventDefault();
-          var code = $(this).data('code');
-          var tel = $(this).data('tel');
-          //alert("선불상담");
-          $("#Consultus_Btn").trigger("click");
-          schedule_talk(code,tel);
+    $(".possible").on("click",function(e){
+
+          $("#Consultus").addClass("show");
       });
-      $(document).on("click",".paytypeOff",function(e){
-          //$(".paytypeOn").click(function(e){
-          e.preventDefault();
-          var code = $(this).data('code');
-          var tel = $(this).data('tel');
-          $("#Consultus_Btn").trigger("click");
-          schedule_talk(code,tel,2);
-          //alert("후불상담");
+            $("#Consultus_Btn").on("click",function(e){
+
+          $("#Consultus").removeClass("show");
       });
     </script>
 </body>
