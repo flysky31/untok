@@ -2272,7 +2272,8 @@ const closeButton = document.getElementById('Consultus_Btn');
 links.forEach(link => {
   link.addEventListener('click', (event) => {
     event.preventDefault(); // 기본 동작 방지
-    const bgImage = getComputedStyle(link).backgroundImage; // 클릭한 링크의 배경 이미지 가져오기
+    const parentLi = link.parentElement; // 클릭한 링크의 부모 li 선택
+    const bgImage = getComputedStyle(parentLi).backgroundImage; // li의 배경 이미지 가져오기
     modalImage.style.backgroundImage = bgImage; // 모달에 배경 이미지 설정
     modal.style.display = 'flex'; // 모달 열기
   });
